@@ -191,6 +191,7 @@
               name: domainName,
               type: "Domain",
               size: 12,
+              color: "rgba(0, 212, 255, 0.5)",
             });
             nodes.push(nodeMap.get(domainId));
           }
@@ -203,6 +204,7 @@
               name: clusterName,
               type: "Cluster",
               size: 8,
+              color: "rgba(0, 212, 255, 0.5)",
             });
             nodes.push(nodeMap.get(clusterId));
           }
@@ -215,6 +217,7 @@
               name: nodeName,
               type: "Node",
               size: 4,
+              color: "rgba(0, 212, 255, 0.5)",
             });
             nodes.push(nodeMap.get(nodeId));
           }
@@ -231,6 +234,7 @@
           name: "ROOT",
           type: "ROOT",
           size: 16,
+          color: "rgba(0, 212, 255, 0.5)",
         });
         nodes.push(nodeMap.get(rootId));
 
@@ -253,7 +257,7 @@
         backgroundColor: "rgba(0, 0, 0, 0.95)",
         nodeColor: (node) => node.color,
         nodeSize: (node) => node.size,
-        linkColor: () => `rgba(100, 200, 255, 0.3)`,
+        linkColor: () => `rgba(255, 255, 255, 0.1)`,
         linkWidth: (link) => {
           // Make links to/from node_0 invisible (0 width)
           if (link.source === "node_0" || link.target === "node_0") {
