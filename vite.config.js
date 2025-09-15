@@ -19,6 +19,7 @@ export default defineConfig({
   // Preview server configuration for Railway
   preview: {
     port: process.env.PORT || 4173,
-    host: '0.0.0.0'
+    host: '0.0.0.0',
+    allowedHosts: ['cosmograph-production.up.railway.app']
   }
 })
