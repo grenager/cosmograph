@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmograph - 10,000 Node Animation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: #000000;
+        font-family: "Space Mono", monospace;
+        overflow: hidden;
+      }
+
+      #container {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+      }
+
+      #cosmograph {
+        width: 100%;
+        height: 100%;
+      }
+
+      .info-panel {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 15px 20px;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        z-index: 100;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .info-panel h2 {
+        margin: 0 0 10px 0;
+        font-size: 18px;
+        color: #00d4ff;
+      }
+
+      .info-panel p {
+        margin: 5px 0;
+      }
+
+      .controls {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        display: flex;
+        gap: 10px;
+        z-index: 100;
+      }
+
+      .btn {
+        background: rgba(0, 212, 255, 0.9);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: bold;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+      }
+
+      .btn:hover {
+        background: rgba(0, 212, 255, 1);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+      }
+
+      .loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 24px;
+        z-index: 200;
+      }
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-top: 4px solid #00d4ff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 20px;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .stats {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 15px 20px;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        z-index: 100;
+        font-size: 14px;
+        min-width: 150px;
+      }
+
+      .stat-value {
+        color: #00d4ff;
+        font-weight: bold;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <div>Loading Cosmograph...</div>
+      </div>
+
+      <div class="info-panel">
+        <h2>🌌 Cosmic Network</h2>
+        <p><strong>Nodes:</strong> 1000 particles</p>
+        <p><strong>Links:</strong> Dynamic connections</p>
+        <p><strong>Colors:</strong> Rainbow spectrum</p>
+        <p><strong>Animation:</strong> Real-time physics</p>
+      </div>
+
+      <div class="stats" id="stats">
+        <div>Zoom: <span class="stat-value" id="zoomLevel">1.0</span></div>
+        <div>FPS: <span class="stat-value" id="fps">60</span></div>
+        <div>Progress: <span class="stat-value" id="progress">0%</span></div>
+      </div>
+
+      <div class="controls">
+        <button class="btn" id="pauseBtn">Pause</button>
+        <button class="btn" id="restartBtn">Restart</button>
+        <button class="btn" id="fitViewBtn">Fit View</button>
+        <button class="btn" id="randomizeBtn">Randomize Colors</button>
+      </div>
+
+      <div id="cosmograph"></div>
+    </div>
+
+    <script type="module">
+      import { Cosmograph } from "@cosmograph/cosmograph";
+
+      // Generate simple nodes with 4 different sizes
+      function generateNodes(count) {
+        const nodes = [];
+        const sizes = [4, 12]; // 4 different sizes
+
+        for (let i = 0; i < count; i++) {
+          const sizeIndex = i % 2; // Cycle through the 4 sizes
+
+          nodes.push({
+            id: `node_${i}`,
+            size: sizes[sizeIndex],
+            color: "rgba(0, 212, 255, 0.5)", // translucent blue
+            // Start in 16px box around center
+            x: (Math.random() - 0.5) * 160, // Random position within ±8 units
+            y: (Math.random() - 0.5) * 160, // Random position within ±8 units
+          });
+        }
+        console.log("Generated nodes:", nodes.length);
+        return nodes;
+      }
+
+      // Generate links with node 0 as central hub connected to all others
+      function generateLinks(nodes) {
+        const links = [];
+        const nodeCount = nodes.length;
+        const nodeConnections = new Map(); // Track connections per node
+
+        // Initialize connection count for each node
+        nodes.forEach((node) => nodeConnections.set(node.id, 0));
+
+        // First: Connect every node to node 0 (making node 0 the central hub)
+        for (let i = 1; i < nodeCount; i++) {
+          links.push({
+            source: nodes[0].id, // node_0
+            target: nodes[i].id, // node_1, node_2, etc.
+            weight: Math.random(),
+          });
+
+          // Update connection counts
+          nodeConnections.set(
+            nodes[0].id,
+            nodeConnections.get(nodes[0].id) + 1
+          );
+          nodeConnections.set(
+            nodes[i].id,
+            nodeConnections.get(nodes[i].id) + 1
+          );
+        }
+
+        // Second: Give each node 2-8 total connections (they already have 1 to node 0)
+        for (let i = 1; i < nodeCount; i++) {
+          const totalTargetConnections = 2 + Math.floor(Math.random() * 7); // 2-8 total connections
+          const currentConnections = nodeConnections.get(nodes[i].id); // Should be 1 (connection to node 0)
+          const additionalNeeded = totalTargetConnections - currentConnections;
+
+          for (let j = 0; j < additionalNeeded; j++) {
+            // Pick a random target node (not self, not node 0 since already connected)
+            let targetIndex = Math.floor(Math.random() * nodeCount);
+
+            let attempts = 0;
+            while ((targetIndex === i || targetIndex === 0) && attempts < 100) {
+              targetIndex = Math.floor(Math.random() * nodeCount);
+              attempts++;
+            }
+
+            // If we found a valid target, create the link
+            if (attempts < 100) {
+              links.push({
+                source: nodes[i].id,
+                target: nodes[targetIndex].id,
+                weight: Math.random(),
+              });
+
+              // Update connection counts
+              nodeConnections.set(
+                nodes[i].id,
+                nodeConnections.get(nodes[i].id) + 1
+              );
+              nodeConnections.set(
+                nodes[targetIndex].id,
+                nodeConnections.get(nodes[targetIndex].id) + 1
+              );
+            }
+          }
+        }
+
+        console.log("Generated links:", links.length);
+        console.log(`Node 0 connections: ${nodeConnections.get(nodes[0].id)}`);
+        console.log(
+          "Connection distribution:",
+          Array.from(nodeConnections.values()).sort((a, b) => a - b)
+        );
+        return links;
+      }
+
+      // Generate initial data
+      console.log("Generating 10,000 nodes...");
+      const nodes = generateNodes(1000);
+      console.log("Generating links...");
+      const links = generateLinks(nodes); // Uncomment to add links
+
+      console.log(`Generated ${nodes.length} nodes and ${links.length} links`);
+
+      // Create container element
+      const container = document.getElementById("cosmograph");
+
+      // Initialize Cosmograph with simple settings
+      const cosmograph = new Cosmograph(container, {
+        backgroundColor: "rgba(0, 0, 0, 0.95)",
+        nodeColor: (node) => node.color,
+        nodeSize: (node) => node.size,
+        linkColor: () => `rgba(100, 200, 255, 0.3)`,
+        linkWidth: (link) => {
+          // Make links to/from node_0 invisible (0 width)
+          if (link.source === "node_0" || link.target === "node_0") {
+            return 0;
+          }
+          // All other links are visible
+          return 2.0;
+        },
+
+        // Beautiful animation settings
+        disableSimulation: false, // Explicitly enable simulation
+        // simulationFriction: 10, // Less friction for more movement
+
+        // Step 1: Test with simple static values first
+        simulationLinkSpring: 0.1, // Single value for all links
+        simulationLinkDistance: 100, // Single value for all links
+
+        simulationRepulsion: 20.0, // Very strong repulsion for explosion effect
+        // simulationGravity: 0.005, // Minimal gravity
+        // simulationCenter: 0, // Minimal centering force
+        simulationDecay: 10000, // Much longer simulation time
+
+        // // Visual enhancements
+        // curvedLinks: false,
+        // curvedLinkWeight: 0.6,
+        linkArrows: false,
+        // scaleNodesOnZoom: true,
+        // pixelRatio: 2,
+
+        // // Labels
+        // showDynamicLabels: false,
+        // showTopLabels: false,
+        // showHoveredNodeLabel: true,
+        // nodeLabelAccessor: (node) =>
+        //   `${node.category} ${node.id.split("_")[1]}`,
+
+        // // Zoom settings
+        fitViewOnInit: false,
+        // fitViewDelay: 500,
+        initialZoomLevel: 0.5,
+
+        // // Performance
+        // showFPSMonitor: false,
+        // spaceSize: 6000,
+      });
+
+      // Set up event handlers
+      let isRunning = true;
+      let animationFrame;
+
+      cosmograph.onClick = (node, index, position, event) => {
+        if (node) {
+          console.log("Clicked node:", node);
+          cosmograph.selectNode(node, true); // Select node and adjacent nodes
+          cosmograph.zoomToNode(node);
+        }
+      };
+
+      cosmograph.onNodeMouseOver = (node) => {
+        // Add a subtle glow effect by temporarily changing the node
+        if (node) {
+          console.log("Hovering:", node.category, node.id);
+        }
+      };
+
+      cosmograph.onSimulationTick = (alpha) => {
+        const progress = Math.round((1 - alpha) * 100);
+        document.getElementById("progress").textContent = `${progress}%`;
+      };
+
+      cosmograph.onZoom = (event) => {
+        const zoom = parseFloat(event.transform.k.toFixed(2));
+        document.getElementById("zoomLevel").textContent = zoom.toString();
+      };
+
+      // Control buttons
+      document.getElementById("pauseBtn").addEventListener("click", () => {
+        if (isRunning) {
+          cosmograph.pause();
+          document.getElementById("pauseBtn").textContent = "Resume";
+          isRunning = false;
+        } else {
+          cosmograph.restart();
+          document.getElementById("pauseBtn").textContent = "Pause";
+          isRunning = true;
+        }
+      });
+
+      document.getElementById("restartBtn").addEventListener("click", () => {
+        cosmograph.start(1.0);
+        document.getElementById("pauseBtn").textContent = "Pause";
+        isRunning = true;
+      });
+
+      document.getElementById("fitViewBtn").addEventListener("click", () => {
+        cosmograph.fitView(1000);
+      });
+
+      document.getElementById("randomizeBtn").addEventListener("click", () => {
+        currentScheme = (currentScheme + 1) % schemes.length;
+        const schemeName = schemes[currentScheme];
+        const colorFunc = colorSchemes[schemeName];
+
+        // Update node colors
+        nodes.forEach((node, i) => {
+          node.color = colorFunc(i, nodes.length);
+        });
+
+        // Update the cosmograph
+        cosmograph.setData(nodes, links);
+        cosmograph.setConfig({
+          nodeColor: (node) => node.color,
+        });
+
+        console.log(`Applied ${schemeName} color scheme`);
+      });
+
+      // FPS counter
+      let lastTime = performance.now();
+      let frameCount = 0;
+
+      function updateFPS() {
+        frameCount++;
+        const now = performance.now();
+        const delta = now - lastTime;
+
+        if (delta >= 1000) {
+          const fps = Math.round((frameCount * 1000) / delta);
+          document.getElementById("fps").textContent = fps.toString();
+          frameCount = 0;
+          lastTime = now;
+        }
+
+        requestAnimationFrame(updateFPS);
+      }
+
+      // Initialize the graph
+      async function init() {
+        try {
+          console.log("Setting data...");
+          cosmograph.setData(nodes, links);
+
+          // Explicitly start simulation with high energy for the "explosion" effect
+          console.log("Starting simulation with high energy...");
+
+          // Hide loading indicator
+          document.getElementById("loading").style.display = "none";
+
+          console.log("Cosmograph initialized successfully!");
+          console.log("Controls:");
+          console.log("- Click nodes to select and zoom");
+          console.log("- Use mouse wheel to zoom");
+          console.log("- Drag to pan");
+          console.log("- Use control buttons for interactions");
+
+          // Start FPS monitoring
+          updateFPS();
+        } catch (error) {
+          console.error("Error initializing Cosmograph:", error);
+          document.getElementById("loading").innerHTML = `
+                    <div style="color: #ff4444;">
+                        <div>Failed to load Cosmograph</div>
+                        <div style="font-size: 14px; margin-top: 10px;">${error.message}</div>
+                    </div>
+                `;
+        }
+      }
+
+      // Wait a moment for the library to load, then initialize
+      setTimeout(init, 100);
+
+      // Add some interactive features
+      let colorAnimationInterval;
+
+      // Animate colors over time (optional - can be toggled)
+      function startColorAnimation() {
+        colorAnimationInterval = setInterval(() => {
+          nodes.forEach((node, i) => {
+            const time = Date.now() * 0.001;
+            const hue = ((i / nodes.length) * 360 + time * 10) % 360;
+            node.color = `hsl(${hue}, 70%, ${
+              50 + Math.sin(time + i * 0.01) * 20
+            }%)`;
+          });
+
+          cosmograph.setConfig({
+            nodeColor: (node) => node.color,
+          });
+        }, 100);
+      }
+
+      // Add keyboard controls
+      document.addEventListener("keydown", (e) => {
+        switch (e.code) {
+          case "Space":
+            e.preventDefault();
+            document.getElementById("pauseBtn").click();
+            break;
+          case "KeyR":
+            document.getElementById("restartBtn").click();
+            break;
+          case "KeyF":
+            document.getElementById("fitViewBtn").click();
+            break;
+          case "KeyC":
+            document.getElementById("randomizeBtn").click();
+            break;
+        }
+      });
+
+      console.log("🌌 Cosmic Network initialized!");
+      console.log("Keyboard shortcuts:");
+      console.log("  Space - Pause/Resume");
+      console.log("  R - Restart simulation");
+      console.log("  F - Fit view");
+      console.log("  C - Change color scheme");
+    </script>
+  </body>
+</html>

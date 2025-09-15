@@ -1,0 +1,20 @@
+{
+  "name": "cosmograph",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@cosmograph/cosmograph": "^1.4.2"
+  },
+  "devDependencies": {
+    "vite": "^7.1.5"
+  }
+}
