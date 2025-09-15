@@ -13,7 +13,7 @@
   "license": "ISC",
   "description": "",
   "engines": {
-    "node": ">=20.0.0"
+    "node": "20.x"
   },
   "dependencies": {
     "@cosmograph/cosmograph": "^1.4.2"
