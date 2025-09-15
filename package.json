@@ -12,6 +12,9 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "dependencies": {
     "@cosmograph/cosmograph": "^1.4.2"
   },
