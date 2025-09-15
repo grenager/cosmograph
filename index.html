@@ -176,6 +176,7 @@
         const nodes = [];
         const links = [];
         const nodeMap = new Map();
+        const linkSet = new Set();
 
         lines.forEach((line) => {
           const [domainName, clusterName, nodeName] = line
@@ -223,8 +224,16 @@
           }
 
           // Add links
-          links.push({ source: domainId, target: clusterId });
-          links.push({ source: clusterId, target: nodeId });
+          const domainClusterLink = `${domainId}-${clusterId}`;
+          if (!linkSet.has(domainClusterLink)) {
+            links.push({ source: domainId, target: clusterId });
+            linkSet.add(domainClusterLink);
+          }
+          const clusterNodeLink = `${clusterId}-${nodeId}`;
+          if (!linkSet.has(clusterNodeLink)) {
+            links.push({ source: clusterId, target: nodeId });
+            linkSet.add(clusterNodeLink);
+          }
         });
 
         // Create ROOT node and connect to all domains
@@ -240,7 +249,11 @@
 
         const domainNodes = nodes.filter((n) => n.type === "Domain");
         domainNodes.forEach((domainNode) => {
-          links.push({ source: rootId, target: domainNode.id });
+          const rootDomainLink = `${rootId}-${domainNode.id}`;
+          if (!linkSet.has(rootDomainLink)) {
+            links.push({ source: rootId, target: domainNode.id });
+            linkSet.add(rootDomainLink);
+          }
         });
 
         console.log(
@@ -257,7 +270,7 @@
         backgroundColor: "rgba(0, 0, 0, 0.95)",
         nodeColor: (node) => node.color,
         nodeSize: (node) => node.size,
-        linkColor: () => `rgba(255, 255, 255, 0.1)`,
+        linkColor: () => `rgba(255, 255, 255, 0.3)`,
         linkWidth: (link) => {
           // Make links to/from node_0 invisible (0 width)
           if (link.source === "node_0" || link.target === "node_0") {
