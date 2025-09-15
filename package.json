@@ -12,13 +12,10 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "engines": {
-    "node": "20.x"
-  },
   "dependencies": {
     "@cosmograph/cosmograph": "^1.4.2"
   },
   "devDependencies": {
-    "vite": "^7.1.5"
+    "vite": "^5.4.20"
   }
 }
