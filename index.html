@@ -167,108 +167,83 @@
     <script type="module">
       import { Cosmograph } from "@cosmograph/cosmograph";
 
-      // Generate simple nodes with 4 different sizes
-      function generateNodes(count) {
+      async function loadDataFromCSV(url) {
+        const response = await fetch(url);
+        const csvText = await response.text();
+        const lines = csvText.trim().split("\n");
+        lines.shift(); // Remove header
+
         const nodes = [];
-        const sizes = [4, 12]; // 4 different sizes
-
-        for (let i = 0; i < count; i++) {
-          const sizeIndex = i % 2; // Cycle through the 4 sizes
-
-          nodes.push({
-            id: `node_${i}`,
-            size: sizes[sizeIndex],
-            color: "rgba(0, 212, 255, 0.5)", // translucent blue
-            // Start in 16px box around center
-            x: (Math.random() - 0.5) * 160, // Random position within ±8 units
-            y: (Math.random() - 0.5) * 160, // Random position within ±8 units
-          });
-        }
-        console.log("Generated nodes:", nodes.length);
-        return nodes;
-      }
-
-      // Generate links with node 0 as central hub connected to all others
-      function generateLinks(nodes) {
         const links = [];
-        const nodeCount = nodes.length;
-        const nodeConnections = new Map(); // Track connections per node
+        const nodeMap = new Map();
 
-        // Initialize connection count for each node
-        nodes.forEach((node) => nodeConnections.set(node.id, 0));
+        lines.forEach((line) => {
+          const [domainName, clusterName, nodeName] = line
+            .split(",")
+            .map((s) => s.trim().replace(/^"|"$/g, ""));
+          if (!domainName || !clusterName || !nodeName) return;
 
-        // First: Connect every node to node 0 (making node 0 the central hub)
-        for (let i = 1; i < nodeCount; i++) {
-          links.push({
-            source: nodes[0].id, // node_0
-            target: nodes[i].id, // node_1, node_2, etc.
-            weight: Math.random(),
-          });
-
-          // Update connection counts
-          nodeConnections.set(
-            nodes[0].id,
-            nodeConnections.get(nodes[0].id) + 1
-          );
-          nodeConnections.set(
-            nodes[i].id,
-            nodeConnections.get(nodes[i].id) + 1
-          );
-        }
-
-        // Second: Give each node 2-8 total connections (they already have 1 to node 0)
-        for (let i = 1; i < nodeCount; i++) {
-          const totalTargetConnections = 2 + Math.floor(Math.random() * 7); // 2-8 total connections
-          const currentConnections = nodeConnections.get(nodes[i].id); // Should be 1 (connection to node 0)
-          const additionalNeeded = totalTargetConnections - currentConnections;
-
-          for (let j = 0; j < additionalNeeded; j++) {
-            // Pick a random target node (not self, not node 0 since already connected)
-            let targetIndex = Math.floor(Math.random() * nodeCount);
-
-            let attempts = 0;
-            while ((targetIndex === i || targetIndex === 0) && attempts < 100) {
-              targetIndex = Math.floor(Math.random() * nodeCount);
-              attempts++;
-            }
-
-            // If we found a valid target, create the link
-            if (attempts < 100) {
-              links.push({
-                source: nodes[i].id,
-                target: nodes[targetIndex].id,
-                weight: Math.random(),
-              });
-
-              // Update connection counts
-              nodeConnections.set(
-                nodes[i].id,
-                nodeConnections.get(nodes[i].id) + 1
-              );
-              nodeConnections.set(
-                nodes[targetIndex].id,
-                nodeConnections.get(nodes[targetIndex].id) + 1
-              );
-            }
+          // Create Domain node if it doesn't exist
+          const domainId = `Domain:${domainName}`;
+          if (!nodeMap.has(domainId)) {
+            nodeMap.set(domainId, {
+              id: domainId,
+              name: domainName,
+              type: "Domain",
+              size: 12,
+            });
+            nodes.push(nodeMap.get(domainId));
           }
-        }
 
-        console.log("Generated links:", links.length);
-        console.log(`Node 0 connections: ${nodeConnections.get(nodes[0].id)}`);
+          // Create Cluster node if it doesn't exist
+          const clusterId = `Cluster:${clusterName}`;
+          if (!nodeMap.has(clusterId)) {
+            nodeMap.set(clusterId, {
+              id: clusterId,
+              name: clusterName,
+              type: "Cluster",
+              size: 8,
+            });
+            nodes.push(nodeMap.get(clusterId));
+          }
+
+          // Create Node node if it doesn't exist
+          const nodeId = `Node:${nodeName}`;
+          if (!nodeMap.has(nodeId)) {
+            nodeMap.set(nodeId, {
+              id: nodeId,
+              name: nodeName,
+              type: "Node",
+              size: 4,
+            });
+            nodes.push(nodeMap.get(nodeId));
+          }
+
+          // Add links
+          links.push({ source: domainId, target: clusterId });
+          links.push({ source: clusterId, target: nodeId });
+        });
+
+        // Create ROOT node and connect to all domains
+        const rootId = "ROOT";
+        nodeMap.set(rootId, {
+          id: rootId,
+          name: "ROOT",
+          type: "ROOT",
+          size: 16,
+        });
+        nodes.push(nodeMap.get(rootId));
+
+        const domainNodes = nodes.filter((n) => n.type === "Domain");
+        domainNodes.forEach((domainNode) => {
+          links.push({ source: rootId, target: domainNode.id });
+        });
+
         console.log(
-          "Connection distribution:",
-          Array.from(nodeConnections.values()).sort((a, b) => a - b)
+          `Loaded ${nodes.length} nodes and ${links.length} links from CSV.`
         );
-        return links;
+        return { nodes, links };
       }
-
-      // Generate initial data
-      console.log("Generating 10,000 nodes...");
-      const nodes = generateNodes(1000);
-      console.log("Generating links...");
-      const links = generateLinks(nodes); // Uncomment to add links
-
-      console.log(`Generated ${nodes.length} nodes and ${links.length} links`);
 
       // Create container element
       const container = document.getElementById("cosmograph");
@@ -293,10 +268,10 @@
         // simulationFriction: 10, // Less friction for more movement
 
         // Step 1: Test with simple static values first
-        simulationLinkSpring: 0.1, // Single value for all links
-        simulationLinkDistance: 100, // Single value for all links
+        simulationLinkSpring: 1.0, // Single value for all links
+        simulationLinkDistance: 50, // Single value for all links
 
-        simulationRepulsion: 20.0, // Very strong repulsion for explosion effect
+        simulationRepulsion: 1.0, // Very strong repulsion for explosion effect
         // simulationGravity: 0.005, // Minimal gravity
         // simulationCenter: 0, // Minimal centering force
         simulationDecay: 10000, // Much longer simulation time
@@ -419,6 +394,7 @@
       async function init() {
         try {
           console.log("Setting data...");
+          const { nodes, links } = await loadDataFromCSV("nodes.csv");
           cosmograph.setData(nodes, links);
 
           // Explicitly start simulation with high energy for the "explosion" effect

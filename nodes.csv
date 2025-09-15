@@ -1,0 +1,1001 @@
+Domain,Cluster,Node
+MANAGE,Personal Finance Hub,Bank Account Aggregator
+MANAGE,Personal Finance Hub,Credit Card Transaction Importer
+MANAGE,Personal Finance Hub,Investment Portfolio Tracker
+MANAGE,Personal Finance Hub,Net Worth Calculator
+MANAGE,Personal Finance Hub,Monthly Spending Analyzer
+MANAGE,Personal Finance Hub,Budget Variance Alerter
+MANAGE,Personal Finance Hub,Upcoming Bill Reminder
+MANAGE,Personal Finance Hub,Credit Score Monitor
+MANAGE,Personal Finance Hub,Savings Goal Progress Tracker
+MANAGE,Personal Finance Hub,Recurring Subscription Auditor
+MANAGE,Personal Finance Hub,Tax Document Collector
+MANAGE,Personal Finance Hub,Debt Payoff Simulator
+MANAGE,Personal Finance Hub,"""Is this purchase worth it?"" Calculator"
+MANAGE,Personal Finance Hub,Financial Goal Setter
+MANAGE,Personal Finance Hub,Charitable Donation Tracker
+MANAGE,Personal Finance Hub,HSA/FSA Optimizer
+MANAGE,Health & Wellness Hub,Sleep Cycle Tracker
+MANAGE,Health & Wellness Hub,Daily Activity Monitor
+MANAGE,Health & Wellness Hub,Calorie & Macro Nutrient Logger
+MANAGE,Health & Wellness Hub,Doctor's Appointment Scheduler
+MANAGE,Health & Wellness Hub,Prescription Refill Reminder
+MANAGE,Health & Wellness Hub,Water Intake Tracker
+MANAGE,Health & Wellness Hub,Meditation Session Timer
+MANAGE,Health & Wellness Hub,Screen Time Monitor
+MANAGE,Health & Wellness Hub,Stress Level Correlator
+MANAGE,Health & Wellness Hub,Annual Check-up Planner
+MANAGE,Health & Wellness Hub,Symptom Checker & Journal
+MANAGE,Health & Wellness Hub,"Vitals Correlator (HRV, BP)"
+MANAGE,Health & Wellness Hub,Mental Health Journal
+MANAGE,Health & Wellness Hub,Fitness Class Booker
+MANAGE,Health & Wellness Hub,Nutritionist Chatbot
+MANAGE,Health & Wellness Hub,Air Quality & Pollen Alerter
+MANAGE,Weekly Meal Plan,Recipe Finder (based on preferences)
+MANAGE,Weekly Meal Plan,Pantry & Fridge Inventory Scanner
+MANAGE,Weekly Meal Plan,Grocery List Generator
+MANAGE,Weekly Meal Plan,Supermarket Price Comparison Shopper
+MANAGE,Weekly Meal Plan,Online Grocery Order Placer
+MANAGE,Weekly Meal Plan,Dietary Restriction Cross-Referencer
+MANAGE,Weekly Meal Plan,Expiring Food Alerter
+MANAGE,Weekly Meal Plan,Seasonal Produce Recommender
+MANAGE,Weekly Meal Plan,Leftover Recipe Suggester
+MANAGE,Weekly Meal Plan,Wine Pairing Adviser
+MANAGE,Weekly Meal Plan,"""Batch Cooking"" Planner"
+MANAGE,Weekly Meal Plan,Farmer's Market Locator
+MANAGE,Weekly Meal Plan,Nutritional Information Summarizer
+MANAGE,Weekly Meal Plan,"""What's for Dinner?"" Roulette"
+MANAGE,Weekly Meal Plan,Coupon & Deal Finder
+MANAGE,Weekly Meal Plan,Recipe Scaler (for more/fewer people)
+MANAGE,Smart Home Control,"Morning Routine Activator (Lights, Music)"
+MANAGE,Smart Home Control,Evening Wind-Down Sequencer
+MANAGE,Smart Home Control,"""Away"" Mode Energy Saver"
+MANAGE,Smart Home Control,Smart Thermostat Optimizer
+MANAGE,Smart Home Control,Security System Monitor
+MANAGE,Smart Home Control,Appliance Maintenance Reminder
+MANAGE,Smart Home Control,Wi-Fi Network Health Checker
+MANAGE,Smart Home Control,Automated Blinds Controller
+MANAGE,Smart Home Control,Guest Access Manager
+MANAGE,Smart Home Control,Ambiance & Lighting Scene Setter
+MANAGE,Smart Home Control,Smart Speaker Command Broadcaster
+MANAGE,Smart Home Control,Energy Consumption Reporter
+MANAGE,Smart Home Control,"""Movie Night"" Scene Creator"
+MANAGE,Smart Home Control,Package Delivery Alerter
+MANAGE,Smart Home Control,Automated Plant Watering
+MANAGE,Smart Home Control,"""Welcome Home"" Geofence Trigger"
+MANAGE,Digital Declutter,Duplicate File Finder
+MANAGE,Digital Declutter,Large File Identifier
+MANAGE,Digital Declutter,"Photo Organizer (by face, date, location)"
+MANAGE,Digital Declutter,Email Unsubscriber
+MANAGE,Digital Declutter,"""Email Triage"" Priority Sorter"
+MANAGE,Digital Declutter,Old Account & Password Auditor
+MANAGE,Digital Declutter,Cloud Storage Analyzer
+MANAGE,Digital Declutter,App Usage Tracker
+MANAGE,Digital Declutter,Desktop Cleaner & Organizer
+MANAGE,Digital Declutter,Screenshot Sorter & Deleter
+MANAGE,Digital Declutter,Blurry Photo Detector
+MANAGE,Digital Declutter,Social Media Feed Cleaner
+MANAGE,Digital Declutter,"""Read Later"" Article Summarizer"
+MANAGE,Digital Declutter,Contact List Merger
+MANAGE,Digital Declutter,Cache & Temp File Cleaner
+MANAGE,Digital Declutter,Browser Tab Manager
+MANAGE,Vehicle Maintenance,Oil Change Reminder
+MANAGE,Vehicle Maintenance,Tire Rotation Tracker
+MANAGE,Vehicle Maintenance,Registration Renewal Alerter
+MANAGE,Vehicle Maintenance,Insurance Policy Shopper
+MANAGE,Vehicle Maintenance,Recall Notice Monitor
+MANAGE,Vehicle Maintenance,Fuel Economy Tracker
+MANAGE,Vehicle Maintenance,Local Mechanic Reputational Search
+MANAGE,Vehicle Maintenance,Car Wash Weather Forecaster
+MANAGE,Vehicle Maintenance,Parking Spot Reminder
+MANAGE,Vehicle Maintenance,Scheduled Maintenance Booker
+MANAGE,Vehicle Maintenance,"""Best Time to Buy Gas"" Suggester"
+MANAGE,Vehicle Maintenance,Car Value Estimator (Kelley Blue Book)
+MANAGE,Vehicle Maintenance,Road Trip Maintenance Checklist
+MANAGE,Vehicle Maintenance,Digital Glovebox (for documents)
+MANAGE,Vehicle Maintenance,Parking Ticket Alerter
+MANAGE,Vehicle Maintenance,EV Charging Station Locator
+MANAGE,Contact Relationship Manager,Birthday & Anniversary Reminder
+MANAGE,Contact Relationship Manager,"""Time to Reconnect"" Suggester"
+MANAGE,Contact Relationship Manager,Social Media Activity Summarizer
+MANAGE,Contact Relationship Manager,Gift Idea Lister
+MANAGE,Contact Relationship Manager,Automated Greeting Drafter
+MANAGE,Contact Relationship Manager,Professional Network Updater
+MANAGE,Contact Relationship Manager,Shared Memory/Photo Finder
+MANAGE,Contact Relationship Manager,Address Book Cleaner
+MANAGE,Contact Relationship Manager,New Contact Info Importer
+MANAGE,Contact Relationship Manager,Group Communication Organizer
+MANAGE,Contact Relationship Manager,"""Follow Up"" Reminder"
+MANAGE,Contact Relationship Manager,Contact Note Logger
+MANAGE,Contact Relationship Manager,"""Meeting Prep"" Dossier Creator"
+MANAGE,Contact Relationship Manager,"""How do I know this person?"" Helper"
+MANAGE,Contact Relationship Manager,Social Circle Mapper
+MANAGE,Contact Relationship Manager,"""Remember Their Name"" Mnemonic Creator"
+MANAGE,Household Chore Coordinator,Task Assigner (Round-Robin)
+MANAGE,Household Chore Coordinator,Chore Completion Tracker
+MANAGE,Household Chore Coordinator,"""Cleaning Supplies Low"" Alerter"
+MANAGE,Household Chore Coordinator,"Seasonal Task Planner (e.g., Gutter Cleaning)"
+MANAGE,Household Chore Coordinator,Kids' Allowance & Chore Linker
+MANAGE,Household Chore Coordinator,Guest Arrival Prep Checklist
+MANAGE,Household Chore Coordinator,"""15-Minute Tidy"" Timer"
+MANAGE,Household Chore Coordinator,Deep Clean Scheduler
+MANAGE,Household Chore Coordinator,Repairperson Booker
+MANAGE,Household Chore Coordinator,Appliance Manual Finder
+MANAGE,Household Chore Coordinator,"""How to Clean Anything"" Guide"
+MANAGE,Household Chore Coordinator,Stain Removal Adviser
+MANAGE,Household Chore Coordinator,Room-by-Room Checklist Generator
+MANAGE,Household Chore Coordinator,Warranty & Receipt Scanner
+MANAGE,Household Chore Coordinator,"""Time to Declutter"" Zone Suggester"
+MANAGE,Household Chore Coordinator,Family Calendar Sync
+MANAGE,Travel & Loyalty Programs,Points & Miles Balance Aggregator
+MANAGE,Travel & Loyalty Programs,Expiration Date Warning System
+MANAGE,Travel & Loyalty Programs,"""Best Use of Points"" Suggester"
+MANAGE,Travel & Loyalty Programs,Elite Status Tracker
+MANAGE,Travel & Loyalty Programs,Award Availability Scanner
+MANAGE,Travel & Loyalty Programs,Upgrade Opportunity Alerter
+MANAGE,Travel & Loyalty Programs,Loyalty Program Sign-up Bonus Finder
+MANAGE,Travel & Loyalty Programs,Lounge Access Guide
+MANAGE,Travel & Loyalty Programs,Credit Card Benefit Maximizer
+MANAGE,Travel & Loyalty Programs,Travel Expense Reporter
+MANAGE,Travel & Loyalty Programs,"""Status Challenge"" Opportunity Finder"
+MANAGE,Travel & Loyalty Programs,Transfer Partner Value Calculator
+MANAGE,Travel & Loyalty Programs,Hidden Fee Detector
+MANAGE,Travel & Loyalty Programs,"""Points vs. Cash"" Decision Helper"
+MANAGE,Travel & Loyalty Programs,Itinerary Change Monitor
+MANAGE,Travel & Loyalty Programs,Trip Interruption Insurance Adviser
+MANAGE,Pet Care Hub,Veterinarian Appointment Booker
+MANAGE,Pet Care Hub,Vaccination Reminder
+MANAGE,Pet Care Hub,Pet Food Auto-Orderer
+MANAGE,Pet Care Hub,Daily Walk & Exercise Logger
+MANAGE,Pet Care Hub,Pet Sitter/Walker Finder
+MANAGE,Pet Care Hub,Medication Administration Tracker
+MANAGE,Pet Care Hub,Pet-Friendly Location Scout
+MANAGE,Pet Care Hub,Grooming Scheduler
+MANAGE,Pet Care Hub,Toy & Treat Recommender
+MANAGE,Pet Care Hub,Pet Insurance Analyzer
+MANAGE,Pet Care Hub,Pet Cam Monitor
+MANAGE,Pet Care Hub,Local Dog Park Guide
+MANAGE,Pet Care Hub,"""Is this food safe?"" Checker"
+MANAGE,Pet Care Hub,Pet Weight & Health Journal
+MANAGE,Pet Care Hub,Breed-Specific Care Tip Finder
+MANAGE,Pet Care Hub,Lost Pet Poster Generator
+MANAGE,Legal Document Hub,Will & Trust Drafter
+MANAGE,Legal Document Hub,Power of Attorney Form Finder
+MANAGE,Legal Document Hub,Lease Agreement Analyzer
+MANAGE,Legal Document Hub,Contract Jargon Explainer
+MANAGE,Legal Document Hub,Notary Service Locator
+MANAGE,Legal Document Hub,Legal Aid Clinic Finder
+MANAGE,Legal Document Hub,Traffic Ticket Advisor
+MANAGE,Legal Document Hub,Small Claims Court Guide
+MANAGE,Legal Document Hub,IP (Copyright/Trademark) Helper
+MANAGE,Legal Document Hub,Personal Injury Journal
+MANAGE,Legal Document Hub,NDA Generator
+MANAGE,Legal Document Hub,Terms of Service Summarizer
+MANAGE,Legal Document Hub,Jury Duty Reminder
+MANAGE,Legal Document Hub,Official Document Request Helper
+MANAGE,Legal Document Hub,Case Law Searcher
+MANAGE,Legal Document Hub,Safe Deposit Box Inventory
+MANAGE,Personal Security Center,Password Manager & Auditor
+MANAGE,Personal Security Center,Data Breach Alerter
+MANAGE,Personal Security Center,VPN Recommender
+MANAGE,Personal Security Center,Phishing Email Detector
+MANAGE,Personal Security Center,Secure Document Vault
+MANAGE,Personal Security Center,Identity Theft Monitor
+MANAGE,Personal Security Center,Social Media Privacy Checker
+MANAGE,Personal Security Center,Home Security Camera Analyst
+MANAGE,Personal Security Center,Emergency Contact Notifier
+MANAGE,Personal Security Center,Two-Factor Auth (2FA) Helper
+MANAGE,Personal Security Center,"""Have I Been Pwned?"" Scanner"
+MANAGE,Personal Security Center,Software Update Reminder
+MANAGE,Personal Security Center,Encrypted Messaging Adviser
+MANAGE,Personal Security Center,Digital Footprint Reducer
+MANAGE,Personal Security Center,"""Burner"" Email/Phone Number Generator"
+MANAGE,Personal Security Center,"Device Location Tracker (""Find my phone"")"
+MANAGE,Family & Child Coordination,School Calendar Sync
+MANAGE,Family & Child Coordination,Kids' Activity Scheduler
+MANAGE,Family & Child Coordination,Babysitter/Nanny Booker
+MANAGE,Family & Child Coordination,Shared Family Photo Album Organizer
+MANAGE,Family & Child Coordination,Allowance & Chore Tracker
+MANAGE,Family & Child Coordination,Parental Control Manager
+MANAGE,Family & Child Coordination,Kids' Health & Vax Record Keeper
+MANAGE,Family & Child Coordination,Summer Camp Researcher
+MANAGE,Family & Child Coordination,College Savings (529) Planner
+MANAGE,Family & Child Coordination,Family Emergency Plan Creator
+MANAGE,Family & Child Coordination,Homework Helper & Tutor Finder
+MANAGE,Family & Child Coordination,Screen Time Contract Drafter
+MANAGE,Family & Child Coordination,"""Family Movie Night"" Suggester"
+MANAGE,Family & Child Coordination,A+ Grade Reward Tracker
+MANAGE,Family & Child Coordination,Carpool Organizer
+MANAGE,Family & Child Coordination,Important Document Keeper (Birth Certs)
+MANAGE,Wardrobe & Style Manager,Digital Closet Inventory
+MANAGE,Wardrobe & Style Manager,"""What to Wear"" Outfit Suggester (by weather)"
+MANAGE,Wardrobe & Style Manager,Style Inspiration Mood Board (from Pinterest)
+MANAGE,Wardrobe & Style Manager,Clothing Resale Value Estimator
+MANAGE,Wardrobe & Style Manager,Tailor & Cobbler Locator
+MANAGE,Wardrobe & Style Manager,Laundry Symbol Guide
+MANAGE,Wardrobe & Style Manager,Capsule Wardrobe Planner
+MANAGE,Wardrobe & Style Manager,"""This vs. That"" Style Poll"
+MANAGE,Wardrobe & Style Manager,Brand Ethical Score Checker
+MANAGE,Wardrobe & Style Manager,Size & Fit Recommender
+MANAGE,Wardrobe & Style Manager,"""Pack for a Trip"" Helper"
+MANAGE,Wardrobe & Style Manager,"""Is this in style?"" Trend Checker"
+MANAGE,Wardrobe & Style Manager,Dry Cleaning Scheduler
+MANAGE,Wardrobe & Style Manager,Color Palette Analyzer
+MANAGE,Wardrobe & Style Manager,"""Shop My Closet"" Outfit Finder"
+MANAGE,Wardrobe & Style Manager,Formal Wear Rental Suggester
+MANAGE,Tax Preparation Assistant,Deductible Expense Tracker
+MANAGE,Tax Preparation Assistant,Receipt Scanner & Organizer
+MANAGE,Tax Preparation Assistant,"Tax Form (W2, 1099) Collector"
+MANAGE,Tax Preparation Assistant,Tax Law Change Summarizer
+MANAGE,Tax Preparation Assistant,Audit Risk Analyzer
+MANAGE,Tax Preparation Assistant,Estimated Quarterly Tax Calculator
+MANAGE,Tax Preparation Assistant,CPA/Tax Preparer Finder
+MANAGE,Tax Preparation Assistant,Free File Eligibility Checker
+MANAGE,Tax Preparation Assistant,Tax Filing Deadline Reminder
+MANAGE,Tax Preparation Assistant,Retirement Contribution Optimizer
+MANAGE,Tax Preparation Assistant,"""Am I a dependent?"" Status Checker"
+MANAGE,Tax Preparation Assistant,State & Local Tax Guide
+MANAGE,Tax Preparation Assistant,Refund Status Tracker
+MANAGE,Tax Preparation Assistant,Tax Document Checklist Generator
+MANAGE,Tax Preparation Assistant,"""What's changed from last year?"" Analyzer"
+MANAGE,Tax Preparation Assistant,Extension Filing Helper
+MANAGE,Personal & Professional Branding,Social Media Profile Consistency Checker
+MANAGE,Personal & Professional Branding,Personal Website SEO Auditor
+MANAGE,Personal & Professional Branding,"""Google Yourself"" Reputation Monitor"
+MANAGE,Personal & Professional Branding,LinkedIn Profile Optimizer
+MANAGE,Personal & Professional Branding,Professional Headshot Adviser
+MANAGE,Personal & Professional Branding,Brand Voice & Tone Guide
+MANAGE,Personal & Professional Branding,Online Mention Alerter
+MANAGE,Personal & Professional Branding,"""Expertise"" Content Suggester"
+MANAGE,Personal & Professional Branding,Personal Brand Mood Board Creator
+MANAGE,Personal & Professional Branding,Competitor Brand Analyzer
+CREATE,Write and Publish a Newsletter,Niche & Topic Validator
+CREATE,Write and Publish a Newsletter,Newsletter Name Generator
+CREATE,Write and Publish a Newsletter,Content Curation Assistant
+CREATE,Write and Publish a Newsletter,"""Hook"" & Subject Line Writer"
+CREATE,Write and Publish a Newsletter,Audience Growth Strategy Planner
+CREATE,Write and Publish a Newsletter,"Monetization Model Suggester (Ads, Subs)"
+CREATE,Write and Publish a Newsletter,"""Call to Action"" (CTA) Optimizer"
+CREATE,Write and Publish a Newsletter,A/B Test Scheduler
+CREATE,Write and Publish a Newsletter,Readability & Tone Checker
+CREATE,Write and Publish a Newsletter,"""Best Time to Send"" Analyzer"
+CREATE,Launch New Website,Domain Name Availability Checker
+CREATE,Launch New Website,Competitor Website Analyzer
+CREATE,Launch New Website,Content Outline Generator
+CREATE,Launch New Website,Brand Color Palette Suggester
+CREATE,Launch New Website,Stock Image Sourcer
+CREATE,Launch New Website,SEO Keyword Researcher
+CREATE,Launch New Website,Web Hosting Comparison Shopper
+CREATE,Launch New Website,Website Uptime Monitor
+CREATE,Launch New Website,Traffic Analytics Reporter
+CREATE,Launch New Website,A/B Test Idea Generator
+CREATE,Launch New Website,Accessibility (WCAG) Checker
+CREATE,Launch New Website,Performance (Lighthouse) Auditor
+CREATE,Launch New Website,Favicon Generator
+CREATE,Launch New Website,Cookie Policy Helper
+CREATE,Launch New Website,Sitemap Creator
+CREATE,Launch New Website,Backlink Opportunity Finder
+CREATE,Start a Side Business,Business Plan Drafter
+CREATE,Start a Side Business,Market Opportunity Analyzer
+CREATE,Start a Side Business,Target Audience Persona Creator
+CREATE,Start a Side Business,Startup Cost Estimator
+CREATE,Start a Side Business,Name & Logo Idea Generator
+CREATE,Start a Side Business,"Legal Structure Adviser (LLC, etc.)"
+CREATE,Start a Side Business,Social Media Handle Checker
+CREATE,Start a Side Business,Elevator Pitch Refiner
+CREATE,Start a Side Business,Funding Opportunity Scanner
+CREATE,Start a Side Business,Minimal Viable Product (MVP) Feature Lister
+CREATE,Start a Side Business,Pricing Strategy Calculator
+CREATE,Start a Side Business,Brand Voice & Tone Definer
+CREATE,Start a Side Business,Customer Acquisition Cost (CAC) Estimator
+CREATE,Start a Side Business,Simple Website Builder
+CREATE,Start a Side Business,Press Release Drafter
+CREATE,Start a Side Business,SWOT Analysis Generator
+CREATE,Plan a Home Renovation,Design Inspiration Mood Board Creator
+CREATE,Plan a Home Renovation,Budget & Expense Tracker
+CREATE,Plan a Home Renovation,Contractor Reputation Checker
+CREATE,Plan a Home Renovation,Materials & Appliance Shopper
+CREATE,Plan a Home Renovation,Permit Requirement Identifier
+CREATE,Plan a Home Renovation,Project Timeline & Gantt Chart Builder
+CREATE,Plan a Home Renovation,DIY Tutorial Finder
+CREATE,Plan a Home Renovation,Building Code Lookup
+CREATE,Plan a Home Renovation,3D Room Layout Visualizer
+CREATE,Plan a Home Renovation,Leftover Materials Recycler/Seller
+CREATE,Plan a Home Renovation,"""Before & After"" Visualizer"
+CREATE,Plan a Home Renovation,ROI Calculator (for resale value)
+CREATE,Plan a Home Renovation,Furniture Layout Optimizer
+CREATE,Plan a Home Renovation,Paint Color Suggester
+CREATE,Plan a Home Renovation,Work Breakdown Structure Creator
+CREATE,Plan a Home Renovation,Punch List Tracker
+CREATE,Design a Presentation,Audience Analysis Helper
+CREATE,Design a Presentation,Core Message Distiller
+CREATE,Design a Presentation,Slide Outline Generator
+CREATE,Design a Presentation,Data Visualization Suggester
+CREATE,Design a Presentation,Branded Template Applier
+CREATE,Design a Presentation,Relevant Quote & Statistic Finder
+CREATE,Design a Presentation,Image & Icon Sourcer
+CREATE,Design a Presentation,Speaker Notes Drafter
+CREATE,Design a Presentation,Presentation Timer & Pacer
+CREATE,Design a Presentation,"""Killer Opening"" Idea Generator"
+CREATE,Design a Presentation,Storytelling Arc Builder
+CREATE,Design a Presentation,"""One-Liner"" Summary Creator"
+CREATE,Design a Presentation,Technical Jargon Explainer
+CREATE,Design a Presentation,Copyright-Free Image Finder
+CREATE,Design a Presentation,Audience Poll & Q&A Integrator
+CREATE,Design a Presentation,"""Leave Behind"" Document Formatter"
+CREATE,Write a Book,Plot & Character Arc Developer
+CREATE,Write a Book,Research Assistant & Fact-Checker
+CREATE,Write a Book,Chapter Outline Creator
+CREATE,Write a Book,"""Writer's Block"" Prompt Generator"
+CREATE,Write a Book,Daily Word Count Tracker
+CREATE,Write a Book,Dialogue Improvement Suggester
+CREATE,Write a Book,Readability Analyzer
+CREATE,Write a Book,Historical Accuracy Verifier
+CREATE,Write a Book,Agent & Publisher Query Drafter
+CREATE,Write a Book,Beta Reader Feedback Compiler
+CREATE,Write a Book,"""Show, Don't Tell"" Rewriter"
+CREATE,Write a Book,Thematic Symbolism Tracker
+CREATE,Write a Book,"""World-Building"" Consistency Checker"
+CREATE,Write a Book,Back Cover Blurb Writer
+CREATE,Write a Book,Character Name Generator
+CREATE,Write a Book,Plagiarism Scanner
+CREATE,Plan a Major Event,Venue Scout & Comparison Tool
+CREATE,Plan a Major Event,"Vendor Manager (Caterer, DJ, etc.)"
+CREATE,Plan a Major Event,Guest List & RSVP Tracker
+CREATE,Plan a Major Event,Invitation Drafter & Sender
+CREATE,Plan a Major Event,Seating Chart Optimizer
+CREATE,Plan a Major Event,Event Day Timeline Coordinator
+CREATE,Plan a Major Event,Budget & Payment Tracker
+CREATE,Plan a Major Event,Playlist Suggester
+CREATE,Plan a Major Event,Thank You Note Helper
+CREATE,Plan a Major Event,Dietary Restriction Consolidator
+CREATE,Plan a Major Event,Event Hashtag Generator
+CREATE,Plan a Major Event,Weather Contingency Planner
+CREATE,Plan a Major Event,"""Run of Show"" Document Creator"
+CREATE,Plan a Major Event,Guest Communication Broadcaster
+CREATE,Plan a Major Event,Post-Event Photo Aggregator
+CREATE,Plan a Major Event,Insurance & Permit Adviser
+CREATE,Create a Podcast,Episode Idea Brainstormer
+CREATE,Create a Podcast,Guest Outreach & Booker
+CREATE,Create a Podcast,Interview Question Drafter
+CREATE,Create a Podcast,Audio Transcript Generator
+CREATE,Create a Podcast,Show Notes Creator
+CREATE,Create a Podcast,Social Media Clip Maker
+CREATE,Create a Podcast,Intro/Outro Music Composer
+CREATE,Create a Podcast,Podcast Hosting Platform Analyzer
+CREATE,Create a Podcast,Ad-Read Script Helper
+CREATE,Create a Podcast,Audience Feedback Summarizer
+CREATE,Create a Podcast,"""Audio to Blog Post"" Repurposer"
+CREATE,Create a Podcast,Topic & Keyword Researcher
+CREATE,Create a Podcast,"Automated Audio Editor (""um"" remover)"
+CREATE,Create a Podcast,Cover Art Idea Generator
+CREATE,Create a Podcast,"""Listener Persona"" Creator"
+CREATE,Create a Podcast,Cross-Promotion Partner Finder
+CREATE,Develop a Software App,User Persona Creator
+CREATE,Develop a Software App,Feature Prioritization Matrix
+CREATE,Develop a Software App,User Flow Diagrammer
+CREATE,Develop a Software App,Tech Stack Recommender
+CREATE,Develop a Software App,API Documentation Scraper
+CREATE,Develop a Software App,Code Snippet Generator
+CREATE,Develop a Software App,Bug Report Consolidator
+CREATE,Develop a Software App,Test Case Writer
+CREATE,Develop a Software App,App Store Description Optimizer
+CREATE,Develop a Software App,User Feedback Classifier
+CREATE,Develop a Software App,"""Read Me"" File Drafter"
+CREATE,Develop a Software App,"""User Story"" Generator"
+CREATE,Develop a Software App,Code Refactoring Suggester
+CREATE,Develop a Software App,Database Schema Designer
+CREATE,Develop a Software App,Release Notes Writer
+CREATE,Develop a Software App,Security Vulnerability Scanner
+CREATE,Plan a Garden,Plant Hardiness Zone Identifier
+CREATE,Plan a Garden,Sunlight & Shadow Mapper
+CREATE,Plan a Garden,Companion Planting Suggester
+CREATE,Plan a Garden,Seed & Plant Shopper
+CREATE,Plan a Garden,Watering Schedule Reminder
+CREATE,Plan a Garden,Pest & Disease Identifier
+CREATE,Plan a Garden,Soil Health Analyzer
+CREATE,Plan a Garden,Harvest Time Predictor
+CREATE,Plan a Garden,Composting Guide
+CREATE,Plan a Garden,Local Garden Club Finder
+CREATE,Plan a Garden,Square Foot Garden Planner
+CREATE,Plan a Garden,"""Good Bug/Bad Bug"" Identifier"
+CREATE,Plan a Garden,Container Garden Designer
+CREATE,Plan a Garden,Moon Phase Planting Guide
+CREATE,Plan a Garden,Pollinator Garden Planner
+CREATE,Plan a Garden,Seed Sprouting Assistant
+CREATE,Build a Custom PC,Component Compatibility Checker
+CREATE,Build a Custom PC,Performance Bottleneck Analyzer
+CREATE,Build a Custom PC,Price-to-Performance Calculator
+CREATE,Build a Custom PC,Multi-Retailer Price Watcher
+CREATE,Build a Custom PC,Build Tutorial Aggregator
+CREATE,Build a Custom PC,Power Supply Unit (PSU) Calculator
+CREATE,Build a Custom PC,Cable Management Optimizer
+CREATE,Build a Custom PC,Overclocking Stability Tester
+CREATE,Build a Custom PC,"""Future-Proofing"" Adviser"
+CREATE,Build a Custom PC,Resale Value Estimator
+CREATE,Build a Custom PC,Airflow & Cooling Simulator
+CREATE,Build a Custom PC,"""Aesthetic Theme"" Suggester (RGB, etc.)"
+CREATE,Build a Custom PC,Operating System Installer Guide
+CREATE,Build a Custom PC,Driver & Software Updater
+CREATE,Build a Custom PC,Benchmark Tester
+CREATE,Build a Custom PC,"""Silent PC"" Component Recommender"
+CREATE,Create a Video/Short Film,Storyboard Creator
+CREATE,Create a Video/Short Film,Shot List Generator
+CREATE,Create a Video/Short Film,Location Scout
+CREATE,Create a Video/Short Film,Casting Call Helper
+CREATE,Create a Video/Short Film,B-Roll Footage Sourcer
+CREATE,Create a Video/Short Film,Royalty-Free Music Finder
+CREATE,Create a Video/Short Film,Video Editing Assistant
+CREATE,Create a Video/Short Film,Color Grading Suggester
+CREATE,Create a Video/Short Film,Title Sequence Designer
+CREATE,Create a Video/Short Film,Subtitle Generator
+CREATE,Create a Video/Short Film,Foley & Sound Effect Finder
+CREATE,Create a Video/Short Film,Scriptwriting Assistant
+CREATE,Create a Video/Short Film,Equipment Rental Lister
+CREATE,Create a Video/Short Film,"""Video to GIF"" Converter"
+CREATE,Create a Video/Short Film,YouTube/Vimeo Upload Optimizer
+CREATE,Create a Video/Short Film,Permit & Release Form Finder
+CREATE,Host a Community Meetup,Topic Brainstormer
+CREATE,Host a Community Meetup,Speaker Outreach Drafter
+CREATE,Host a Community Meetup,Venue Booker
+CREATE,Host a Community Meetup,Ticketing & RSVP Manager
+CREATE,Host a Community Meetup,Sponsor Prospector
+CREATE,Host a Community Meetup,Social Media Promoter
+CREATE,Host a Community Meetup,"""Day Of"" Agenda Coordinator"
+CREATE,Host a Community Meetup,Attendee Feedback Collector
+CREATE,Host a Community Meetup,"""Icebreaker"" Idea Generator"
+CREATE,Host a Community Meetup,A/V Equipment Rental Finder
+CREATE,Host a Community Meetup,Name Tag Generator
+CREATE,Host a Community Meetup,"""Find a Co-host"" Matcher"
+CREATE,Host a Community Meetup,Food & Drink Order Helper
+CREATE,Host a Community Meetup,"""Post-event Networking"" Facilitator"
+CREATE,Host a Community Meetup,"""Swag Bag"" Idea Suggester"
+CREATE,Host a Community Meetup,Code of Conduct Drafter
+CREATE,Launch an Online Store,Product Idea Validator
+CREATE,Launch an Online Store,Niche Market Analyzer
+CREATE,Launch an Online Store,Supplier & Dropshipper Finder
+CREATE,Launch an Online Store,Shopify/Etsy Store Setup Helper
+CREATE,Launch an Online Store,Product Photography Guide
+CREATE,Launch an Online Store,Product Description Writer
+CREATE,Launch an Online Store,Pricing Strategy Calculator
+CREATE,Launch an Online Store,Shipping & Logistics Optimizer
+CREATE,Launch an Online Store,Customer Support Bot Drafter
+CREATE,Launch an Online Store,Return Policy Generator
+CREATE,Launch an Online Store,Sales Tax Compliance Helper
+CREATE,Launch an Online Store,"""Abandoned Cart"" Email Writer"
+CREATE,Launch an Online Store,Customer Review Request Sender
+CREATE,Launch an Online Store,"""Out of Stock"" Alerter"
+CREATE,Launch an Online Store,Marketing Campaign Idea Generator
+CREATE,Launch an Online Store,Packaging & Branding Adviser
+CREATE,Ghostwrite an Article,Trending Topic Identifier
+CREATE,Ghostwrite an Article,Target Publication Analyzer
+CREATE,Ghostwrite an Article,Personal Story Extractor
+CREATE,Ghostwrite an Article,Core Argument Outliner
+CREATE,Ghostwrite an Article,Supporting Data & Statistic Finder
+CREATE,Ghostwrite an Article,Expert Interview Question Drafter
+CREATE,Ghostwrite an Article,Tone & Style Matcher
+CREATE,Ghostwrite an Article,SEO Headline Optimizer
+CREATE,Ghostwrite an Article,Plagiarism Checker
+CREATE,Ghostwrite an Article,"""Call to Action"" Writer"
+CREATE,Ghostwrite an Article,"""First Draft"" Generator"
+CREATE,Ghostwrite an Article,"""Stronger Verb"" Suggester"
+CREATE,Ghostwrite an Article,Readability Scorer
+CREATE,Ghostwrite an Article,"""Hook"" & Opening Paragraph Refiner"
+CREATE,Ghostwrite an Article,Submission Guideline Checker
+CREATE,Ghostwrite an Article,Byline & Bio Drafter
+CREATE,Design a Board Game,Game Mechanic Brainstormer
+CREATE,Design a Board Game,Core Loop Designer
+CREATE,Design a Board Game,Rules Text Refiner
+CREATE,Design a Board Game,Playtester Group Finder
+CREATE,Design a Board Game,Component Prototyping Guide
+CREATE,Design a Board Game,Art Style Suggester
+CREATE,Design a Board Game,Kickstarter Campaign Planner
+CREATE,Design a Board Game,Manufacturing Cost Estimator
+CREATE,Design a Board Game,"""Game Balance"" Simulator"
+CREATE,Design a Board Game,"""Similar Games"" Market Researcher"
+CREATE,Design a Board Game,Thematic Story Writer
+CREATE,Design a Board Game,"""Print and Play"" File Generator"
+CREATE,Design a Board Game,Box Art Idea Generator
+CREATE,Design a Board Game,"""Blind Playtest"" Facilitator"
+CREATE,Design a Board Game,"""Expansion Pack"" Idea Generator"
+CREATE,Design a Board Game,BoardGameGeek Page Creator
+GROW,Build a Personal Knowledge System,"""Second Brain"" Tool Recommender (Notion, etc.)"
+GROW,Build a Personal Knowledge System,"""Zettelkasten"" Note-Taking Guide"
+GROW,Build a Personal Knowledge System,"""Progressive Summarization"" Assistant"
+GROW,Build a Personal Knowledge System,Book & Article Note Extractor
+GROW,Build a Personal Knowledge System,"""Thought-Linking"" Suggester"
+GROW,Build a Personal Knowledge System,"""Spaced Repetition"" Flashcard Creator"
+GROW,Build a Personal Knowledge System,Personal Knowledge Graph Visualizer
+GROW,Build a Personal Knowledge System,"""Daily Review"" Prompter"
+GROW,Build a Personal Knowledge System,"""Capture Anything"" Universal Inbox Setup"
+GROW,Build a Personal Knowledge System,"""Digital Garden"" Public Publisher"
+GROW,Learn a New Language,Vocabulary Builder (Spaced Repetition)
+GROW,Learn a New Language,Conversation Practice Bot
+GROW,Learn a New Language,Grammar Rule Explainer
+GROW,Learn a New Language,Pronunciation Coach
+GROW,Learn a New Language,Cultural Nuance Guide
+GROW,Learn a New Language,"Media Recommender (Movies, Music)"
+GROW,Learn a New Language,Daily Lesson Planner
+GROW,Learn a New Language,Fluency Progress Tester
+GROW,Learn a New Language,Translation Helper
+GROW,Learn a New Language,Native Speaker Tandem Partner Finder
+GROW,Learn a New Language,Immersive Story Generator
+GROW,Learn a New Language,Verb Conjugation Trainer
+GROW,Learn a New Language,Idiom & Slang Explainer
+GROW,Learn a New Language,Language Exchange Partner Finder
+GROW,Learn a New Language,Subtitled Media Scraper
+GROW,Learn a New Language,Travel Phrasebook Creator
+GROW,Master an Instrument,Practice Session Scheduler
+GROW,Master an Instrument,Music Theory Tutor
+GROW,Master an Instrument,Chord & Scale Chart Finder
+GROW,Master an Instrument,"""Listen & Identify"" Ear Trainer"
+GROW,Master an Instrument,Metronome & Rhythm Trainer
+GROW,Master an Instrument,Song Tab & Sheet Music Searcher
+GROW,Master an Instrument,Improvisation Backing Track Player
+GROW,Master an Instrument,Famous Artist Style Analyzer
+GROW,Master an Instrument,Instrument Tuner
+GROW,Master an Instrument,Local Jam Session Finder
+GROW,Master an Instrument,"""Perfect Practice"" Technique Guide"
+GROW,Master an Instrument,Songwriting Assistant
+GROW,Master an Instrument,Sight-Reading Trainer
+GROW,Master an Instrument,Performance Anxiety Coach
+GROW,Master an Instrument,"""Record Yourself"" Feedback Tool"
+GROW,Master an Instrument,Gear & Accessory Recommender
+GROW,Train for a Marathon,Dynamic Training Plan Generator
+GROW,Train for a Marathon,GPS Run Tracker & Analyzer
+GROW,Train for a Marathon,Pace & Heart Rate Zone Calculator
+GROW,Train for a Marathon,Nutrition & Hydration Planner
+GROW,Train for a Marathon,"Cross-Training Suggester (Yoga, Weights)"
+GROW,Train for a Marathon,Injury Prevention Tip Finder
+GROW,Train for a Marathon,Race Day Checklist Creator
+GROW,Train for a Marathon,Weather-Adjusted Clothing Recommender
+GROW,Train for a Marathon,Motivational Quote & Story Provider
+GROW,Train for a Marathon,Post-Race Recovery Planner
+GROW,Train for a Marathon,"""Find a Running Buddy"" Matcher"
+GROW,Train for a Marathon,Local Race Finder
+GROW,Train for a Marathon,"""Taper Week"" Scheduler"
+GROW,Train for a Marathon,"""Mental Toughness"" Coach"
+GROW,Train for a Marathon,Shoe & Gear Mileage Tracker
+GROW,Train for a Marathon,Elevation Profile Visualizer
+GROW,Improve Public Speaking,Speech Topic Brainstormer
+GROW,Improve Public Speaking,Outline & Structure Creator
+GROW,Improve Public Speaking,"""Um & Ah"" Filler Word Counter"
+GROW,Improve Public Speaking,Pace & Tone Analyzer
+GROW,Improve Public Speaking,Body Language Feedback Simulator
+GROW,Improve Public Speaking,Practice Audience Simulator
+GROW,Improve Public Speaking,Famous Speeches Analyst
+GROW,Improve Public Speaking,Slide Deck Cohesion Checker
+GROW,Improve Public Speaking,Q&A Preparation Helper
+GROW,Improve Public Speaking,Confidence Building Exercise Guide
+GROW,Improve Public Speaking,"""Record and Review"" Tool"
+GROW,Improve Public Speaking,Storytelling Coach
+GROW,Improve Public Speaking,Virtual Teleprompter
+GROW,Improve Public Speaking,Room Setup & Tech Checklister
+GROW,Improve Public Speaking,"""Know Your Audience"" Research Assistant"
+GROW,Improve Public Speaking,Joke & Anecdote Finder
+GROW,Complete an Online Course,Course Discovery & Recommender
+GROW,Complete an Online Course,Study Schedule & Deadline Tracker
+GROW,Complete an Online Course,Key Concept Summarizer
+GROW,Complete an Online Course,Automated Flashcard Creator
+GROW,Complete an Online Course,Practice Quiz Generator
+GROW,Complete an Online Course,Study Group Finder
+GROW,Complete an Online Course,Prerequisite Skill Gap Identifier
+GROW,Complete an Online Course,Note-Taking Assistant
+GROW,Complete an Online Course,Project & Assignment Planner
+GROW,Complete an Online Course,Certification Path Visualizer
+GROW,Complete an Online Course,"""Procrastination Buster"" Coach"
+GROW,Complete an Online Course,"""Explain Like I'm 5"" Simplifier"
+GROW,Complete an Online Course,"""Cornell Method"" Note Formatter"
+GROW,Complete an Online Course,Discussion Forum Post Drafter
+GROW,Complete an Online Course,"""Office Hours"" Question Preparer"
+GROW,Complete an Online Course,Textbook & Reading Material Finder
+GROW,Learn to Cook,"Recipe Recommender (by ingredient, diet)"
+GROW,Learn to Cook,Cooking Technique Video Finder
+GROW,Learn to Cook,Ingredient Substitution Helper
+GROW,Learn to Cook,Meal Prep Planner
+GROW,Learn to Cook,Kitchen Utensil & Equipment Adviser
+GROW,Learn to Cook,Food History & Culture Explainer
+GROW,Learn to Cook,Shopping List Consolidator
+GROW,Learn to Cook,"""What's in my fridge?"" Recipe Generator"
+GROW,Learn to Cook,Plating & Presentation Guide
+GROW,Learn to Cook,Food Safety Timer
+GROW,Learn to Cook,"""Knife Skills"" Trainer"
+GROW,Learn to Cook,Spice Blend Creator
+GROW,Learn to Cook,Flavor Profile Mapper
+GROW,Learn to Cook,"""Clean as you go"" Reminder"
+GROW,Learn to Cook,"""Waste Less"" Cooking Guide"
+GROW,Learn to Cook,Calorie & Nutrition Calculator
+GROW,Read 50 Books a Year,Personalized Book Recommender
+GROW,Read 50 Books a Year,Reading Pace & Goal Tracker
+GROW,Read 50 Books a Year,Local Library Availability Checker
+GROW,Read 50 Books a Year,"""Book Club in a Box"" Kit Creator"
+GROW,Read 50 Books a Year,Author Biography & Interview Finder
+GROW,Read 50 Books a Year,Key Themes & Analysis Summarizer
+GROW,Read 50 Books a Year,Audiobook Companion Finder
+GROW,Read 50 Books a Year,"""Similar Authors"" Suggester"
+GROW,Read 50 Books a Year,Reading List Manager
+GROW,Read 50 Books a Year,Used Bookstore Price Checker
+GROW,Read 50 Books a Year,"""Distraction-Free"" Reading Mode Activator"
+GROW,Read 50 Books a Year,"""Book to Movie"" Adaptation Alerter"
+GROW,Read 50 Books a Year,Literary Prize Winner Lister
+GROW,Read 50 Books a Year,"""Daily Chapter"" Scheduler"
+GROW,Read 50 Books a Year,"Book Review Summarizer (Goodreads, etc.)"
+GROW,Read 50 Books a Year,"""Find a Reading Nook"" Locator"
+GROW,Master Personal Finance,"Investment Strategy Explainer (ETFs, etc.)"
+GROW,Master Personal Finance,"""Financial Jargon"" Buster"
+GROW,Master Personal Finance,Retirement Savings Simulator
+GROW,Master Personal Finance,"Debt Repayment Planner (Avalanche, Snowball)"
+GROW,Master Personal Finance,Tax Optimization Suggester
+GROW,Master Personal Finance,Compound Interest Calculator
+GROW,Master Personal Finance,Risk Tolerance Assessor
+GROW,Master Personal Finance,Market News & Trends Summarizer
+GROW,Master Personal Finance,Frugal Living Tip Finder
+GROW,Master Personal Finance,Financial Guru Philosophy Comparator
+GROW,Master Personal Finance,"""Credit Card Rewards"" Maximizer"
+GROW,Master Personal Finance,"""Buy vs. Lease"" Calculator"
+GROW,Master Personal Finance,"""Should I refinance?"" Adviser"
+GROW,Master Personal Finance,"""401k/IRA"" Contribution Planner"
+GROW,Master Personal Finance,"Insurance Policy (Life, Disability) Analyzer"
+GROW,Master Personal Finance,"""FIRE Movement"" Goal Tracker"
+GROW,Develop a Meditation Practice,Guided Meditation Session Player
+GROW,Develop a Meditation Practice,Silent Meditation Timer with Chimes
+GROW,Develop a Meditation Practice,"""Mindfulness Moment"" Reminder"
+GROW,Develop a Meditation Practice,Progress & Streak Tracker
+GROW,Develop a Meditation Practice,Journaling Prompt Provider
+GROW,Develop a Meditation Practice,Different Meditation Styles Explainer
+GROW,Develop a Meditation Practice,Breathing Exercise Guide
+GROW,Develop a Meditation Practice,Ambient Soundscape Player
+GROW,Develop a Meditation Practice,Posture Checker Simulator
+GROW,Develop a Meditation Practice,Local Meditation Group Finder
+GROW,Develop a Meditation Practice,"""Body Scan"" Guide"
+GROW,Develop a Meditation Practice,"""Walking Meditation"" Pacer"
+GROW,Develop a Meditation Practice,"""Loving-Kindness"" Metta Guide"
+GROW,Develop a Meditation Practice,Retreat & Workshop Finder
+GROW,Develop a Meditation Practice,"""Unplug"" Digital Detox Planner"
+GROW,Develop a Meditation Practice,Stress Level & Meditation Correlator
+GROW,Get a Certification,Certification Path & Requirement Finder
+GROW,Get a Certification,Study Material Aggregator
+GROW,Get a Certification,Practice Exam Scheduler
+GROW,Get a Certification,"""Weakest Subject"" Identifier"
+GROW,Get a Certification,Exam Day Countdown
+GROW,Get a Certification,Application & Paperwork Helper
+GROW,Get a Certification,Peer Study Group Connector
+GROW,Get a Certification,Continuing Education Credit Tracker
+GROW,Get a Certification,Career Impact Simulator
+GROW,Get a Certification,Test-Taking Strategy Adviser
+GROW,Get a Certification,"""Brain Dump"" Topic Organizer"
+GROW,Get a Certification,"""Pomodoro Technique"" Study Timer"
+GROW,Get a Certification,"""Explain it to a friend"" Concept Tester"
+GROW,Get a Certification,Proctoring Rules & Regulations Summarizer
+GROW,Get a Certification,"""Post-Exam"" Celebration Planner"
+GROW,Get a Certification,LinkedIn Profile Badge Updater
+GROW,Improve Your Writing,"""Daily Prompt"" Generator"
+GROW,Improve Your Writing,Grammar & Style Checker
+GROW,Improve Your Writing,"""Clarity"" Rewriter"
+GROW,Improve Your Writing,"""Active vs. Passive Voice"" Converter"
+GROW,Improve Your Writing,"""Stronger Verb"" Thesaurus"
+GROW,Improve Your Writing,"""Famous Author"" Style Emulator"
+GROW,Improve Your Writing,"""Cut the Fluff"" Wordiness Reducer"
+GROW,Improve Your Writing,Sentence Structure Variety Analyzer
+GROW,Improve Your Writing,"""Show, Don't Tell"" Coach"
+GROW,Improve Your Writing,"""Hook the Reader"" Opening Line Helper"
+GROW,Improve Your Writing,"""Journaling for Clarity"" Guide"
+GROW,Improve Your Writing,Peer Review Feedback Organizer
+GROW,Improve Your Writing,"""Morning Pages"" Facilitator"
+GROW,Improve Your Writing,"""Writer's Workshop"" Finder"
+GROW,Improve Your Writing,Punctuation & Syntax Tutor
+GROW,Improve Your Writing,"""Final Polish"" Proofreader"
+GROW,Learn Data Science,"""Python for Beginners"" Code Tutor"
+GROW,Learn Data Science,"""SQL Query"" Practice Environment"
+GROW,Learn Data Science,"""Statistics & Probability"" Explainer"
+GROW,Learn Data Science,"""Machine Learning Algorithm"" Visualizer"
+GROW,Learn Data Science,"""Jupyter Notebook"" Assistant"
+GROW,Learn Data Science,"""Kaggle Competition"" Finder"
+GROW,Learn Data Science,"""Data Cleaning"" Helper"
+GROW,Learn Data Science,"""Data Visualization (Matplotlib)"" Guide"
+GROW,Learn Data Science,"""Build a Portfolio Project"" Planner"
+GROW,Learn Data Science,"""GitHub for Data Science"" Best Practices"
+GROW,Learn Data Science,Public Dataset Finder
+GROW,Learn Data Science,"""Model Deployment"" Guide (Flask, etc.)"
+GROW,Learn Data Science,"""Ethical AI & Bias"" Linter"
+GROW,Learn Data Science,"""Deep Learning (TensorFlow)"" Tutor"
+GROW,Learn Data Science,"""Stay Current"" Research Paper Summarizer"
+GROW,Learn Data Science,"""Data Storytelling"" Coach"
+GROW,Become a Better Negotiator,"""BATNA"" (Best Alternative) Identifier"
+GROW,Become a Better Negotiator,"""Salary Negotiation"" Simulator"
+GROW,Become a Better Negotiator,"""Win-Win"" Solution Brainstormer"
+GROW,Become a Better Negotiator,"""Role-play"" Practice Bot"
+GROW,Become a Better Negotiator,"""Know Your Worth"" Market Data Finder"
+GROW,Become a Better Negotiator,"""Active Listening"" Prompter"
+GROW,Become a Better Negotiator,"""Body Language"" Analyst (via video)"
+GROW,Become a Better Negotiator,"""Common Tactics"" Identifier"
+GROW,Become a Better Negotiator,"""Walking Away"" Power Coach"
+GROW,Become a Better Negotiator,"""Email Negotiation"" Drafter"
+GROW,Become a Better Negotiator,"""Long Pause"" Confidence Builder"
+GROW,Become a Better Negotiator,"""Splitting the Difference"" Calculator"
+GROW,Become a Better Negotiator,"""Building Rapport"" Tip Suggester"
+GROW,Become a Better Negotiator,"""Post-Negotiation"" Summary Writer"
+GROW,Become a Better Negotiator,"""Real Estate"" Negotiation Scripter"
+GROW,Become a Better Negotiator,"""Used Car"" Negotiation Guide"
+GROW,Develop Emotional Intelligence,"""Name Your Emotion"" Journal"
+GROW,Develop Emotional Intelligence,"""Empathy"" Practice Simulator"
+GROW,Develop Emotional Intelligence,"""Cognitive Reframing"" Coach"
+GROW,Develop Emotional Intelligence,"""Active Listening"" Skill Builder"
+GROW,Develop Emotional Intelligence,"""Difficult Conversation"" Scripter"
+GROW,Develop Emotional Intelligence,"""Self-Awareness"" Prompt Generator"
+GROW,Develop Emotional Intelligence,"""Giving & Receiving Feedback"" Guide"
+GROW,Develop Emotional Intelligence,"""Trigger"" Identifier & Manager"
+GROW,Develop Emotional Intelligence,"""Non-violent Communication"" Tutor"
+GROW,Develop Emotional Intelligence,"""Reading Social Cues"" Trainer"
+GROW,Develop Emotional Intelligence,"""Mindful Response"" Pauser"
+GROW,Develop Emotional Intelligence,"""Setting Boundaries"" Coach"
+GROW,Develop Emotional Intelligence,"""Building Resilience"" Exercise Guide"
+GROW,Develop Emotional Intelligence,"""Perspective Taking"" Simulator"
+GROW,Develop Emotional Intelligence,"""Gratitude Journal"" Facilitator"
+GROW,Develop Emotional Intelligence,"""Conflict Resolution"" Strategist"
+GROW,Master a DIY Skill,"""Beginner Project"" Suggester"
+GROW,Master a DIY Skill,"""Tool & Material"" Shopper"
+GROW,Master a DIY Skill,"""Safety First"" Checklist Generator"
+GROW,Master a DIY Skill,"""Step-by-Step"" Video Tutorial Finder"
+GROW,Master a DIY Skill,"""Measure Twice, Cut Once"" Simulator"
+GROW,Master a DIY Skill,"""Blueprint & Plan"" Reader"
+GROW,Master a DIY Skill,"""Common Mistakes"" Adviser"
+GROW,Master a DIY Skill,"""Workspace Setup"" Guide"
+GROW,Master a DIY Skill,"""Finishing Techniques"" Tutor (Stain, etc.)"
+GROW,Master a DIY Skill,"""Local Makerspace"" Locator"
+GROW,Master a DIY Skill,"""Project Time & Cost"" Estimator"
+GROW,Master a DIY Skill,"""Upcycling & Repurposing"" Idea Finder"
+GROW,Master a DIY Skill,"""Clean Up"" Assistant"
+GROW,Master a DIY Skill,"""Building Code"" Compliance Checker"
+GROW,Master a DIY Skill,"""Advanced Technique"" Explorer"
+GROW,Master a DIY Skill,"""Show Off Your Work"" Photo Guide"
+EXPLORE,Plan a Ski/Snowboard Trip,"""Snow Report"" & Forecast Monitor"
+EXPLORE,Plan a Ski/Snowboard Trip,"""Resort Comparison"" Tool (Lifts, Acreage)"
+EXPLORE,Plan a Ski/Snowboard Trip,"""Lift Ticket & Pass"" Deal Finder"
+EXPLORE,Plan a Ski/Snowboard Trip,"""Ski-in/Ski-out"" Lodging Scout"
+EXPLORE,Plan a Ski/Snowboard Trip,"""Après-Ski"" Recommender"
+EXPLORE,Plan a Ski/Snowboard Trip,"""Gear Rental"" Shopper"
+EXPLORE,Plan a Ski/Snowboard Trip,"""Travel to Resort"" Logistics Planner"
+EXPLORE,Plan a Ski/Snowboard Trip,"""Trail Map"" Navigator"
+EXPLORE,Plan a Ski/Snowboard Trip,"""Crowd Level"" Predictor"
+EXPLORE,Plan a Ski/Snowboard Trip,"""Backcountry Safety"" Adviser"
+EXPLORE,Plan a Major Vacation,Flight Price Monitor
+EXPLORE,Plan a Major Vacation,Hotel & Rental Scout
+EXPLORE,Plan a Major Vacation,Activity & Tour Recommender
+EXPLORE,Plan a Major Vacation,Itinerary Builder
+EXPLORE,Plan a Major Vacation,Restaurant Reservation Booker
+EXPLORE,Plan a Major Vacation,Rental Car Deal Finder
+EXPLORE,Plan a Major Vacation,Local Cultural Etiquette Guide
+EXPLORE,Plan a Major Vacation,Packing List Generator
+EXPLORE,Plan a Major Vacation,Travel Insurance Shopper
+EXPLORE,Plan a Major Vacation,Currency Exchange Rate Tracker
+EXPLORE,Plan a Major Vacation,Visa Requirement Checker
+EXPLORE,Plan a Major Vacation,"""Off-the-beaten-path"" Suggester"
+EXPLORE,Plan a Major Vacation,Local SIM/eSIM Adviser
+EXPLORE,Plan a Major Vacation,Jet Lag Recovery Planner
+EXPLORE,Plan a Major Vacation,Travel Alert & Safety Monitor
+EXPLORE,Plan a Major Vacation,Souvenir Idea Generator
+EXPLORE,Discover Local Restaurants,"""New & Noteworthy"" Opening Alerter"
+EXPLORE,Discover Local Restaurants,"""Perfect For"" Matcher (e.g., Date Night)"
+EXPLORE,Discover Local Restaurants,Reservation Availability Scanner
+EXPLORE,Discover Local Restaurants,Menu & Dish Recommender
+EXPLORE,Discover Local Restaurants,Food Critic Review Summarizer
+EXPLORE,Discover Local Restaurants,"""Hidden Gem"" Finder (based on local data)"
+EXPLORE,Discover Local Restaurants,Happy Hour & Specials Alerter
+EXPLORE,Discover Local Restaurants,Food Truck Locator
+EXPLORE,Discover Local Restaurants,"""Take a Walk"" Neighborhood Food Tour"
+EXPLORE,Discover Local Restaurants,"""Similar Vibe"" Restaurant Suggester"
+EXPLORE,Discover Local Restaurants,"""Chef's Table"" Opportunity Finder"
+EXPLORE,Discover Local Restaurants,"""Instagrammable Dish"" Locator"
+EXPLORE,Discover Local Restaurants,BYOB Policy Checker
+EXPLORE,Discover Local Restaurants,"""Tasting Menu"" Deal Scraper"
+EXPLORE,Discover Local Restaurants,"""Outdoor Seating"" Weather Matcher"
+EXPLORE,Discover Local Restaurants,Wait Time Estimator
+EXPLORE,Find Live Music & Concerts,Favorite Artist Tour Date Alerter
+EXPLORE,Find Live Music & Concerts,"""Sounds Like"" New Artist Discovery"
+EXPLORE,Find Live Music & Concerts,Ticket Price Comparison Shopper
+EXPLORE,Find Live Music & Concerts,Venue Seating Chart Visualizer
+EXPLORE,Find Live Music & Concerts,Pre-Sale Code Finder
+EXPLORE,Find Live Music & Concerts,Local Venue & Pub Gig Lister
+EXPLORE,Find Live Music & Concerts,Festival Lineup Analyzer
+EXPLORE,Find Live Music & Concerts,Opening Act Recommender
+EXPLORE,Find Live Music & Concerts,Setlist FM Scraper
+EXPLORE,Find Live Music & Concerts,Merch Price Checker
+EXPLORE,Find Live Music & Concerts,"""Acoustic vs. Full Band"" Show Sorter"
+EXPLORE,Find Live Music & Concerts,"""Last Minute Ticket"" Deal Alerter"
+EXPLORE,Find Live Music & Concerts,"""Create a Music Tour"" Itinerary Planner"
+EXPLORE,Find Live Music & Concerts,"""Post-Show"" Meetup Finder"
+EXPLORE,Find Live Music & Concerts,"""Carpool to a Show"" Organizer"
+EXPLORE,Find Live Music & Concerts,"""Tiny Desk"" Concert Notifier"
+EXPLORE,Plan a Weekend Hiking Trip,"Trail Finder (by difficulty, length, views)"
+EXPLORE,Plan a Weekend Hiking Trip,Weather & Trail Condition Monitor
+EXPLORE,Plan a Weekend Hiking Trip,"""What to Pack"" Gear Lister"
+EXPLORE,Plan a Weekend Hiking Trip,Offline Map Downloader
+EXPLORE,Plan a Weekend Hiking Trip,Flora & Fauna Identifier
+EXPLORE,Plan a Weekend Hiking Trip,Sunset/Sunrise Time Alerter
+EXPLORE,Plan a Weekend Hiking Trip,Post-Hike Brewery/Cafe Recommender
+EXPLORE,Plan a Weekend Hiking Trip,"""Leave No Trace"" Principle Reminders"
+EXPLORE,Plan a Weekend Hiking Trip,Stargazing Opportunity Finder
+EXPLORE,Plan a Weekend Hiking Trip,Emergency Contact Sharer
+EXPLORE,Plan a Weekend Hiking Trip,"""Best Photo Spot"" Locator"
+EXPLORE,Plan a Weekend Hiking Trip,"""Loop vs. Out-and-Back"" Trail Sorter"
+EXPLORE,Plan a Weekend Hiking Trip,"""Dog-Friendly Trail"" Filter"
+EXPLORE,Plan a Weekend Hiking Trip,"""Solo Hiker"" Safety Checker"
+EXPLORE,Plan a Weekend Hiking Trip,Permit & Reservation Helper
+EXPLORE,Plan a Weekend Hiking Trip,Altitude Sickness Adviser
+EXPLORE,Explore a New Hobby,Hobby Idea Generator (based on interests)
+EXPLORE,Explore a New Hobby,Local Class & Workshop Finder
+EXPLORE,Explore a New Hobby,"""Beginner's Kit"" Supply Lister"
+EXPLORE,Explore a New Hobby,Online Tutorial & Guide Aggregator
+EXPLORE,Explore a New Hobby,"""Find Your Community"" Forum/Group Locator"
+EXPLORE,Explore a New Hobby,"""Is This For You?"" Cost & Time Estimator"
+EXPLORE,Explore a New Hobby,Skill Progression Mapper
+EXPLORE,Explore a New Hobby,Expert & Influencer Identifier
+EXPLORE,Explore a New Hobby,"""Try Before You Buy"" Rental Finder"
+EXPLORE,Explore a New Hobby,Project Idea Suggester
+EXPLORE,Explore a New Hobby,"""Hobby Swap"" Meetup Finder"
+EXPLORE,Explore a New Hobby,"""Monetize Your Hobby"" Guide"
+EXPLORE,Explore a New Hobby,"""Gift a Hobby"" Experience Booker"
+EXPLORE,Explore a New Hobby,"""Space Requirement"" Analyzer"
+EXPLORE,Explore a New Hobby,"""History of"" Explainer"
+EXPLORE,Explore a New Hobby,"""Tools of the Trade"" Deep-diver"
+EXPLORE,Curate a Film Festival,"Thematic Movie List Creator (e.g., 80s Sci-Fi)"
+EXPLORE,Curate a Film Festival,Streaming Service Availability Checker
+EXPLORE,Curate a Film Festival,"""Hidden Gem"" Movie Finder"
+EXPLORE,Curate a Film Festival,"""Double Feature"" Pairing Suggester"
+EXPLORE,Curate a Film Festival,Critic & Audience Score Aggregator
+EXPLORE,Curate a Film Festival,"""Making Of"" & Trivia Finder"
+EXPLORE,Curate a Film Festival,Movie Night Scheduler & Guest Inviter
+EXPLORE,Curate a Film Festival,Themed Snack & Drink Recommender
+EXPLORE,Curate a Film Festival,"""If You Liked This"" Watch-Next Engine"
+EXPLORE,Curate a Film Festival,Director's Filmography Explorer
+EXPLORE,Curate a Film Festival,"""Spoiler-Free"" Review Summarizer"
+EXPLORE,Curate a Film Festival,"""Content Warning"" Identifier (e.g., violence)"
+EXPLORE,Curate a Film Festival,"""Watch Party"" Synchronizer"
+EXPLORE,Curate a Film Festival,"""Local Indie Theater"" Showings Finder"
+EXPLORE,Curate a Film Festival,"""Create a drinking game"" Rule Generator"
+EXPLORE,Curate a Film Festival,"""Deep-Dive"" Video Essay Recommender"
+EXPLORE,Plan a Museum Tour,Current Exhibit & Event Finder
+EXPLORE,Plan a Museum Tour,"""Free Admission Day"" Alerter"
+EXPLORE,Plan a Museum Tour,Ticket Booker & Pass Consolidator
+EXPLORE,Plan a Museum Tour,"""Must-See Masterpiece"" Itinerary Planner"
+EXPLORE,Plan a Museum Tour,Audio Guide Companion
+EXPLORE,Plan a Museum Tour,"""Beat the Crowds"" Time Suggester"
+EXPLORE,Plan a Museum Tour,Art History & Context Provider
+EXPLORE,Plan a Museum Tour,Museum Cafe & Shop Reviewer
+EXPLORE,Plan a Museum Tour,"""Art in the Wild"" Public Art Finder"
+EXPLORE,Plan a Museum Tour,"""Create Your Own Tour"" Path Builder"
+EXPLORE,Plan a Museum Tour,"""Virtual Tour"" Explorer"
+EXPLORE,Plan a Museum Tour,"""Museum Hack"" Tip Finder"
+EXPLORE,Plan a Museum Tour,"""Skip the Line"" Pass Adviser"
+EXPLORE,Plan a Museum Tour,"""Ask a Curator"" Question Drafter"
+EXPLORE,Plan a Museum Tour,"""Perfect Photo Spot"" Guide"
+EXPLORE,Plan a Museum Tour,"""Gift Shop"" Recommender"
+EXPLORE,Find Volunteer Opportunities,Interest & Skill Matcher
+EXPLORE,Find Volunteer Opportunities,Local Charity & Org Finder
+EXPLORE,Find Volunteer Opportunities,One-Time vs. Recurring Opportunity Sorter
+EXPLORE,Find Volunteer Opportunities,Application & Sign-up Helper
+EXPLORE,Find Volunteer Opportunities,"""Bring a Friend"" Social Volunteer Planner"
+EXPLORE,Find Volunteer Opportunities,Impact & Mission Summarizer
+EXPLORE,Find Volunteer Opportunities,Calendar & Scheduling Assistant
+EXPLORE,Find Volunteer Opportunities,"""What to Wear/Bring"" Guide"
+EXPLORE,Find Volunteer Opportunities,Post-Volunteering Feedback Collector
+EXPLORE,Find Volunteer Opportunities,"""Virtual Volunteering"" Remote Opportunity Finder"
+EXPLORE,Find Volunteer Opportunities,"""Board Member"" Opportunity Scout"
+EXPLORE,Find Volunteer Opportunities,"""Donation Match"" Program Finder"
+EXPLORE,Find Volunteer Opportunities,"""Pro Bono"" Skilled Volunteering Matcher"
+EXPLORE,Find Volunteer Opportunities,"""Voluntourism"" Ethical Guide"
+EXPLORE,Find Volunteer Opportunities,"""Community Service Hours"" Logger"
+EXPLORE,Find Volunteer Opportunities,"""Create Your Own"" Volunteer Project Planner"
+EXPLORE,Explore Local History,"""On This Day"" Historical Event Alerter"
+EXPLORE,Explore Local History,Self-Guided Historical Walking Tour Builder
+EXPLORE,Explore Local History,Old Photograph & Map Overlay
+EXPLORE,Explore Local History,Architectural Style Identifier
+EXPLORE,Explore Local History,Local Legend & Ghost Story Finder
+EXPLORE,Explore Local History,"""Then & Now"" Photo Comparer"
+EXPLORE,Explore Local History,Historical Marker & Plaque Locator
+EXPLORE,Explore Local History,Local Historical Society Event Lister
+EXPLORE,Explore Local History,Cemetery & Genealogy Helper
+EXPLORE,Explore Local History,"""Hidden History"" Obscure Fact Finder"
+EXPLORE,Explore Local History,"""Historical Reenactment"" Event Finder"
+EXPLORE,Explore Local History,"""If these walls could talk"" Building Narrator"
+EXPLORE,Explore Local History,Local Dialect & Accent Explainer
+EXPLORE,Explore Local History,"""Famous Former Residents"" Mapper"
+EXPLORE,Explore Local History,"""Time Capsule"" Content Creator"
+EXPLORE,Explore Local History,"""Ask a Historian"" Question Router"
+EXPLORE,Plan a Themed Dinner Party,Theme & Cuisine Brainstormer
+EXPLORE,Plan a Themed Dinner Party,Recipe & Menu Planner
+EXPLORE,Plan a Themed Dinner Party,Guest List & Invitation Manager
+EXPLORE,Plan a Themed Dinner Party,Music Playlist Curator
+EXPLORE,Plan a Themed Dinner Party,Decor & Ambiance Idea Generator
+EXPLORE,Plan a Themed Dinner Party,"""Conversation Starter"" Prompt Writer"
+EXPLORE,Plan a Themed Dinner Party,Cooking & Prep Timeline Scheduler
+EXPLORE,Plan a Themed Dinner Party,Drink & Cocktail Pairing Suggester
+EXPLORE,Plan a Themed Dinner Party,"Post-Party ""Thank You"" Note Drafter"
+EXPLORE,Plan a Themed Dinner Party,Icebreaker Game Recommender
+EXPLORE,Plan a Themed Dinner Party,"""Dietary Restriction"" Menu Adjuster"
+EXPLORE,Plan a Themed Dinner Party,"""Potluck"" Organizer"
+EXPLORE,Plan a Themed Dinner Party,"""Surprise Party"" Secrecy Coordinator"
+EXPLORE,Plan a Themed Dinner Party,Etiquette & Hosting Guide
+EXPLORE,Plan a Themed Dinner Party,"""Clean Up"" Playlist Generator"
+EXPLORE,Plan a Themed Dinner Party,"""Leftover"" Packaging Helper"
+EXPLORE,Plan a Road Trip,"""Scenic Route"" Planner"
+EXPLORE,Plan a Road Trip,"""Roadside Attraction"" Finder"
+EXPLORE,Plan a Road Trip,Gas Cost & Mileage Calculator
+EXPLORE,Plan a Road Trip,"""Pit Stop"" Recommender (Food, Restrooms)"
+EXPLORE,Plan a Road Trip,"""Co-pilot"" Driving Time Splitter"
+EXPLORE,Plan a Road Trip,"""Audiobook & Podcast"" Queue Builder"
+EXPLORE,Plan a Road Trip,Hotel/Campsite Booker (along route)
+EXPLORE,Plan a Road Trip,"""No cell service"" Offline Map Saver"
+EXPLORE,Plan a Road Trip,"""Road Trip Games"" Suggester"
+EXPLORE,Plan a Road Trip,"""Snack & Drink"" Stocker"
+EXPLORE,Plan a Road Trip,"""Emergency Kit"" Checklist"
+EXPLORE,Plan a Road Trip,Vehicle Pre-trip Inspection Guide
+EXPLORE,Plan a Road Trip,"""Share my ETA"" Broadcaster"
+EXPLORE,Plan a Road Trip,"""Local Radio"" Station Finder"
+EXPLORE,Plan a Road Trip,"""Photo Stop"" Opportunity Alerter"
+EXPLORE,Plan a Road Trip,"""Toll Road"" Cost Estimator"
+EXPLORE,Explore Your Genealogy,"""Family Tree"" Builder"
+EXPLORE,Explore Your Genealogy,"""Census & Ship Manifest"" Searcher"
+EXPLORE,Explore Your Genealogy,"""DNA Test"" Result Analyzer"
+EXPLORE,Explore Your Genealogy,"""Find a Relative"" Connector"
+EXPLORE,Explore Your Genealogy,"""Oral History"" Interview Question Generator"
+EXPLORE,Explore Your Genealogy,"""Old Photo"" Restorer & Colorizer"
+EXPLORE,Explore Your Genealogy,"""Family Crest"" & Heraldry Finder"
+EXPLORE,Explore Your Genealogy,"""Ancestor's Occupation"" Explainer"
+EXPLORE,Explore Your Genealogy,"""Historical Context"" Provider"
+EXPLORE,Explore Your Genealogy,"""Grave Site"" Locator"
+EXPLORE,Explore Your Genealogy,"""Family Recipe"" Digitizer"
+EXPLORE,Explore Your Genealogy,"""Heirloom"" Cataloger"
+EXPLORE,Explore Your Genealogy,"""Surname Origin"" Researcher"
+EXPLORE,Explore Your Genealogy,"""Digital Time Capsule"" Creator"
+EXPLORE,Explore Your Genealogy,"""Family Story"" Compiler"
+EXPLORE,Explore Your Genealogy,"""Look-alike"" Photo Matcher"
+EXPLORE,Become a Local Foodie,"""Farm to Table"" Restaurant Finder"
+EXPLORE,Become a Local Foodie,"""Michelin Guide"" Summarizer"
+EXPLORE,Become a Local Foodie,"""Cooking Class"" with Local Chef Booker"
+EXPLORE,Become a Local Foodie,"""Farmer's Market"" Guide & Seasonal Calendar"
+EXPLORE,Become a Local Foodie,"""Food Blogger"" Review Aggregator"
+EXPLORE,Become a Local Foodie,"""Secret Menu"" Item Finder"
+EXPLORE,Become a Local Foodie,"""Eat the whole menu"" Challenge Tracker"
+EXPLORE,Become a Local Foodie,"""Sommelier"" Wine Pairing Assistant"
+EXPLORE,Become a Local Foodie,"""Local Brewery/Winery"" Tour Planner"
+EXPLORE,Become a Local Foodie,"""Forage for Food"" Guide"
+EXPLORE,Become a Local Foodie,"""Food History"" of Your City Explainer"
+EXPLORE,Become a Local Foodie,"""Late Night Eats"" Locator"
+EXPLORE,Become a Local Foodie,"""Coffee Shop"" with Best Beans Finder"
+EXPLORE,Become a Local Foodie,"""Butcher/Fishmonger"" Quality Checker"
+EXPLORE,Become a Local Foodie,"""Culinary Tour"" Itinerary Creator"
+EXPLORE,Become a Local Foodie,"""Guess the ingredient"" Game Host"
+EXPLORE,Go Camping/Backpacking,"""Campsite Availability"" Scanner"
+EXPLORE,Go Camping/Backpacking,"""Backcountry Permit"" Helper"
+EXPLORE,Go Camping/Backpacking,"""Ultralight"" Gear Lister"
+EXPLORE,Go Camping/Backpacking,"""Meal Prep"" for the Trail Planner"
+EXPLORE,Go Camping/Backpacking,"""Water Source"" Locator & Purifier Guide"
+EXPLORE,Go Camping/Backpacking,"""Wildlife Safety"" Adviser"
+EXPLORE,Go Camping/Backpacking,"""Fire Ban"" Status Alerter"
+EXPLORE,Go Camping/Backpacking,"""Knot Tying"" Animated Guide"
+EXPLORE,Go Camping/Backpacking,"""Campsite Setup"" Checklist"
+EXPLORE,Go Camping/Backpacking,"""Stargazing"" Constellation Identifier"
+EXPLORE,Go Camping/Backpacking,"""Ghost Story"" Generator"
+EXPLORE,Go Camping/Backpacking,"""Hammock Camping"" Guide"
+EXPLORE,Go Camping/Backpacking,"""First Aid"" Reference"
+EXPLORE,Go Camping/Backpacking,"""Navigation/Orienteering"" Tutor"
+EXPLORE,Go Camping/Backpacking,"""Weather Window"" Forecaster"
+EXPLORE,Go Camping/Backpacking,"""Leave No Trace"" Packer"
+EXPLORE,Experience Your City,"""Staycation"" Itinerary Planner"
+EXPLORE,Experience Your City,"""Tourist Trap"" Identifier"
+EXPLORE,Experience Your City,"""Secret Speakeasy"" Locator"
+EXPLORE,Experience Your City,"""Public Transit"" Navigator"
+EXPLORE,Experience Your City,"""Best Photo Spots"" Guide"
+EXPLORE,Experience Your City,"""Free Activity"" Finder"
+EXPLORE,Experience Your City,"""Architectural Tour"" Builder"
+EXPLORE,Experience Your City,"""Local Slang"" Dictionary"
+EXPLORE,Experience Your City,"""Famous Movie Locations"" Mapper"
+EXPLORE,Experience Your City,"""Best People-Watching"" Spot Recommender"
+EXPLORE,Experience Your City,"""Rooftop Bar"" Guide"
+EXPLORE,Experience Your City,"""Park & Picnic"" Optimizer"
+EXPLORE,Experience Your City,"""Day in the Life"" of a Local Simulator"
+EXPLORE,Experience Your City,"""Urban Hike"" Trail Planner"
+EXPLORE,Experience Your City,"""Haunted Places"" Tour"
+EXPLORE,Experience Your City,"""Street Art"" & Mural Finder"
