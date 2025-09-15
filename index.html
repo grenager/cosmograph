@@ -299,13 +299,10 @@
         linkArrows: false,
         // scaleNodesOnZoom: true,
         // pixelRatio: 2,
+        nodeGreyoutOpacity: 0.5,
 
-        // // Labels
-        // showDynamicLabels: false,
-        // showTopLabels: false,
-        // showHoveredNodeLabel: true,
-        // nodeLabelAccessor: (node) =>
-        //   `${node.category} ${node.id.split("_")[1]}`,
+        // Labels
+        showDynamicLabels: true,
 
         // // Zoom settings
         fitViewOnInit: false,
@@ -315,19 +312,20 @@
         // // Performance
         // showFPSMonitor: false,
         // spaceSize: 6000,
+        onClick: (node, index, position, event) => {
+          if (node) {
+            console.log("Selected node:", node);
+            cosmograph.selectNode(node, true); // Select node and adjacent nodes
+          } else {
+            console.log("Deselected node");
+            cosmograph.unselectNodes();
+          }
+        }, // onClick
       });
 
       // Set up event handlers
       let isRunning = true;
       let animationFrame;
-
-      cosmograph.onClick = (node, index, position, event) => {
-        if (node) {
-          console.log("Clicked node:", node);
-          cosmograph.selectNode(node, true); // Select node and adjacent nodes
-          cosmograph.zoomToNode(node);
-        }
-      };
 
       cosmograph.onNodeMouseOver = (node) => {
         // Add a subtle glow effect by temporarily changing the node
@@ -370,6 +368,7 @@
       });
 
       document.getElementById("randomizeBtn").addEventListener("click", () => {
+        const selectedNodes = cosmograph.getSelectedNodes();
         currentScheme = (currentScheme + 1) % schemes.length;
         const schemeName = schemes[currentScheme];
         const colorFunc = colorSchemes[schemeName];
@@ -381,6 +380,9 @@
 
         // Update the cosmograph
         cosmograph.setData(nodes, links);
+        if (selectedNodes.length > 0) {
+          cosmograph.selectNodes(selectedNodes);
+        }
         cosmograph.setConfig({
           nodeColor: (node) => node.color,
         });
