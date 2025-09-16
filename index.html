@@ -286,6 +286,18 @@
             />
             <span id="gravity-value">1.0</span>
           </div>
+          <div class="slider-container">
+            <label for="decay-slider">Decay</label>
+            <input
+              type="range"
+              id="decay-slider"
+              min="1000"
+              max="20000"
+              step="500"
+              value="10000"
+            />
+            <span id="decay-value">10000</span>
+          </div>
           <div class="toggle-container">
             <label for="show-labels-toggle">Show labels</label>
             <input type="checkbox" id="show-labels-toggle" />
@@ -306,6 +318,69 @@
     <script type="module">
       import { Cosmograph } from "@cosmograph/cosmograph";
       let globalNodes = [];
+
+      // Local Storage functions for simulator controls
+      const STORAGE_KEY = "cosmograph-simulator-controls";
+
+      function saveControlValues() {
+        const values = {
+          spring: parseFloat(document.getElementById("spring-slider").value),
+          distance: parseInt(document.getElementById("distance-slider").value),
+          repulsion: parseFloat(
+            document.getElementById("repulsion-slider").value
+          ),
+          gravity: parseFloat(document.getElementById("gravity-slider").value),
+          decay: parseInt(document.getElementById("decay-slider").value),
+          showLabels: document.getElementById("show-labels-toggle").checked,
+        };
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(values));
+      }
+
+      function loadControlValues() {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          try {
+            return JSON.parse(saved);
+          } catch (e) {
+            console.warn("Failed to parse saved control values:", e);
+          }
+        }
+        return null;
+      }
+
+      function applyControlValues(values) {
+        if (!values) return;
+
+        // Apply slider values
+        if (values.spring !== undefined) {
+          document.getElementById("spring-slider").value = values.spring;
+          document.getElementById("spring-value").textContent =
+            values.spring.toFixed(1);
+        }
+        if (values.distance !== undefined) {
+          document.getElementById("distance-slider").value = values.distance;
+          document.getElementById("distance-value").textContent =
+            values.distance;
+        }
+        if (values.repulsion !== undefined) {
+          document.getElementById("repulsion-slider").value = values.repulsion;
+          document.getElementById("repulsion-value").textContent =
+            values.repulsion.toFixed(1);
+        }
+        if (values.gravity !== undefined) {
+          document.getElementById("gravity-slider").value = values.gravity;
+          document.getElementById("gravity-value").textContent =
+            values.gravity.toFixed(1);
+        }
+        if (values.decay !== undefined) {
+          document.getElementById("decay-slider").value = values.decay;
+          document.getElementById("decay-value").textContent = values.decay;
+        }
+        if (values.showLabels !== undefined) {
+          document.getElementById("show-labels-toggle").checked =
+            values.showLabels;
+        }
+      }
 
       let config = {
         backgroundColor: "rgba(0, 0, 0, 0.95)",
@@ -358,9 +433,14 @@
           if (node) {
             console.log("Selected node:", node);
             cosmograph.selectNode(node, true); // Select node and adjacent nodes
+            cosmograph.zoomToNode(node); // Zoom to the selected node
+            config.showLabelsFor = [node];
+            cosmograph.setConfig(config);
           } else {
             console.log("Deselected node");
             cosmograph.unselectNodes();
+            config.showLabelsFor = [];
+            cosmograph.setConfig(config);
           }
         }, // onClick
       };
@@ -526,9 +606,8 @@
         if (selectedNodes.length > 0) {
           cosmograph.selectNodes(selectedNodes);
         }
-        cosmograph.setConfig({
-          nodeColor: (node) => node.color,
-        });
+        config.nodeColor = (node) => node.color;
+        cosmograph.setConfig(config);
 
         console.log(`Applied ${schemeName} color scheme`);
       });
@@ -540,7 +619,9 @@
           const value = parseFloat(e.target.value);
           document.getElementById("spring-value").textContent =
             value.toFixed(1);
-          cosmograph.setConfig({ simulationLinkSpring: value });
+          config.simulationLinkSpring = value;
+          cosmograph.setConfig(config);
+          saveControlValues();
         });
 
       document
@@ -548,7 +629,9 @@
         .addEventListener("input", (e) => {
           const value = parseInt(e.target.value);
           document.getElementById("distance-value").textContent = value;
-          cosmograph.setConfig({ simulationLinkDistance: value });
+          config.simulationLinkDistance = value;
+          cosmograph.setConfig(config);
+          saveControlValues();
         });
 
       document
@@ -557,7 +640,9 @@
           const value = parseFloat(e.target.value);
           document.getElementById("repulsion-value").textContent =
             value.toFixed(1);
-          cosmograph.setConfig({ simulationRepulsion: value });
+          config.simulationRepulsion = value;
+          cosmograph.setConfig(config);
+          saveControlValues();
         });
 
       document
@@ -566,8 +651,18 @@
           const value = parseFloat(e.target.value);
           document.getElementById("gravity-value").textContent =
             value.toFixed(1);
-          cosmograph.setConfig({ simulationGravity: value });
+          config.simulationGravity = value;
+          cosmograph.setConfig(config);
+          saveControlValues();
         });
+
+      document.getElementById("decay-slider").addEventListener("input", (e) => {
+        const value = parseInt(e.target.value);
+        document.getElementById("decay-value").textContent = value;
+        config.simulationDecay = value;
+        cosmograph.setConfig(config);
+        saveControlValues();
+      });
 
       // Show labels toggle
       document
@@ -585,6 +680,7 @@
             );
             cosmograph.setConfig(config);
           }
+          saveControlValues();
         });
 
       // FPS counter
@@ -609,11 +705,43 @@
       // Initialize the graph
       async function init() {
         try {
+          // Load and apply saved control values first
+          const savedValues = loadControlValues();
+          applyControlValues(savedValues);
+
           console.log("Setting data...");
           const { nodes, links } = await loadDataFromCSV("nodes.csv");
           globalNodes = nodes;
           cosmograph.setData(nodes, links);
-          config.showLabelsFor = globalNodes.filter((n) => n.type === "Domain");
+
+          // Apply saved values to cosmograph config if they exist
+          if (savedValues) {
+            if (savedValues.spring !== undefined)
+              config.simulationLinkSpring = savedValues.spring;
+            if (savedValues.distance !== undefined)
+              config.simulationLinkDistance = savedValues.distance;
+            if (savedValues.repulsion !== undefined)
+              config.simulationRepulsion = savedValues.repulsion;
+            if (savedValues.gravity !== undefined)
+              config.simulationGravity = savedValues.gravity;
+            if (savedValues.decay !== undefined)
+              config.simulationDecay = savedValues.decay;
+
+            // Handle labels based on saved checkbox state
+            if (savedValues.showLabels) {
+              config.showLabelsFor = globalNodes;
+            } else {
+              config.showLabelsFor = globalNodes.filter(
+                (n) => n.type === "Domain"
+              );
+            }
+          } else {
+            // Default behavior when no saved values
+            config.showLabelsFor = globalNodes.filter(
+              (n) => n.type === "Domain"
+            );
+          }
+
           cosmograph.setConfig(config);
 
           // Explicitly start simulation with high energy for the "explosion" effect
