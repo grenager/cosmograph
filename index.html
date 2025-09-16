@@ -108,6 +108,27 @@
         font-size: 9.8px;
       }
 
+      .toggle-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10.5px;
+        padding-top: 10.5px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .toggle-container label {
+        font-size: 9.8px;
+        color: white;
+        font-weight: normal;
+      }
+
+      .toggle-container input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+      }
+
       .info-panel {
         background: rgba(0, 0, 0, 0.8);
         color: white;
@@ -265,6 +286,10 @@
             />
             <span id="gravity-value">1.0</span>
           </div>
+          <div class="toggle-container">
+            <label for="show-labels-toggle">Show labels</label>
+            <input type="checkbox" id="show-labels-toggle" />
+          </div>
         </div>
       </div>
 
@@ -280,6 +305,65 @@
 
     <script type="module">
       import { Cosmograph } from "@cosmograph/cosmograph";
+      let globalNodes = [];
+
+      let config = {
+        backgroundColor: "rgba(0, 0, 0, 0.95)",
+        nodeColor: (node) => node.color,
+        nodeSize: (node) => node.size,
+        linkColor: () => `rgba(255, 255, 255, 0.3)`,
+        linkWidth: (link) => {
+          // Make links to/from node_0 invisible (0 width)
+          if (link.source === "node_0" || link.target === "node_0") {
+            return 0;
+          }
+          // All other links are visible
+          return 2.0;
+        },
+
+        // Beautiful animation settings
+        disableSimulation: false, // Explicitly enable simulation
+        // simulationFriction: 10, // Less friction for more movement
+
+        // Step 1: Test with simple static values first
+        simulationLinkSpring: 1.0, // Single value for all links
+        simulationLinkDistance: 60, // Single value for all links
+
+        simulationRepulsion: 8.0, // Very strong repulsion for explosion effect
+        simulationGravity: 1.0, // Minimal gravity
+        // simulationCenter: 0, // Minimal centering force
+        simulationDecay: 10000, // Much longer simulation time
+
+        // // Visual enhancements
+        // curvedLinks: false,
+        // curvedLinkWeight: 0.6,
+        linkArrows: false,
+        // scaleNodesOnZoom: true,
+        // pixelRatio: 2,
+        nodeGreyoutOpacity: 0.2,
+
+        // Labels
+        showDynamicLabels: false,
+        showLabelsFor: [{ id: "ROOT" }],
+
+        // // Zoom settings
+        fitViewOnInit: false,
+        // fitViewDelay: 500,
+        initialZoomLevel: 0.5,
+
+        // // Performance
+        // showFPSMonitor: false,
+        // spaceSize: 6000,
+        onClick: (node, index, position, event) => {
+          if (node) {
+            console.log("Selected node:", node);
+            cosmograph.selectNode(node, true); // Select node and adjacent nodes
+          } else {
+            console.log("Deselected node");
+            cosmograph.unselectNodes();
+          }
+        }, // onClick
+      };
 
       async function loadDataFromCSV(url) {
         const response = await fetch(url);
@@ -380,62 +464,7 @@
       const container = document.getElementById("cosmograph");
 
       // Initialize Cosmograph with simple settings
-      const cosmograph = new Cosmograph(container, {
-        backgroundColor: "rgba(0, 0, 0, 0.95)",
-        nodeColor: (node) => node.color,
-        nodeSize: (node) => node.size,
-        linkColor: () => `rgba(255, 255, 255, 0.3)`,
-        linkWidth: (link) => {
-          // Make links to/from node_0 invisible (0 width)
-          if (link.source === "node_0" || link.target === "node_0") {
-            return 0;
-          }
-          // All other links are visible
-          return 2.0;
-        },
-
-        // Beautiful animation settings
-        disableSimulation: false, // Explicitly enable simulation
-        // simulationFriction: 10, // Less friction for more movement
-
-        // Step 1: Test with simple static values first
-        simulationLinkSpring: 1.0, // Single value for all links
-        simulationLinkDistance: 60, // Single value for all links
-
-        simulationRepulsion: 8.0, // Very strong repulsion for explosion effect
-        simulationGravity: 1.0, // Minimal gravity
-        // simulationCenter: 0, // Minimal centering force
-        simulationDecay: 10000, // Much longer simulation time
-
-        // // Visual enhancements
-        // curvedLinks: false,
-        // curvedLinkWeight: 0.6,
-        linkArrows: false,
-        // scaleNodesOnZoom: true,
-        // pixelRatio: 2,
-        nodeGreyoutOpacity: 0.5,
-
-        // Labels
-        showDynamicLabels: true,
-
-        // // Zoom settings
-        fitViewOnInit: false,
-        // fitViewDelay: 500,
-        initialZoomLevel: 0.5,
-
-        // // Performance
-        // showFPSMonitor: false,
-        // spaceSize: 6000,
-        onClick: (node, index, position, event) => {
-          if (node) {
-            console.log("Selected node:", node);
-            cosmograph.selectNode(node, true); // Select node and adjacent nodes
-          } else {
-            console.log("Deselected node");
-            cosmograph.unselectNodes();
-          }
-        }, // onClick
-      });
+      const cosmograph = new Cosmograph(container, config);
 
       // Set up event handlers
       let isRunning = true;
@@ -540,6 +569,24 @@
           cosmograph.setConfig({ simulationGravity: value });
         });
 
+      // Show labels toggle
+      document
+        .getElementById("show-labels-toggle")
+        .addEventListener("change", (e) => {
+          const showAllLabels = e.target.checked;
+          if (showAllLabels) {
+            // Show all node labels
+            config.showLabelsFor = globalNodes;
+            cosmograph.setConfig(config);
+          } else {
+            // Show only Domain node labels
+            config.showLabelsFor = globalNodes.filter(
+              (n) => n.type === "Domain"
+            );
+            cosmograph.setConfig(config);
+          }
+        });
+
       // FPS counter
       let lastTime = performance.now();
       let frameCount = 0;
@@ -564,7 +611,10 @@
         try {
           console.log("Setting data...");
           const { nodes, links } = await loadDataFromCSV("nodes.csv");
+          globalNodes = nodes;
           cosmograph.setData(nodes, links);
+          config.showLabelsFor = globalNodes.filter((n) => n.type === "Domain");
+          cosmograph.setConfig(config);
 
           // Explicitly start simulation with high energy for the "explosion" effect
           console.log("Starting simulation with high energy...");
@@ -594,52 +644,6 @@
 
       // Wait a moment for the library to load, then initialize
       setTimeout(init, 100);
-
-      // Add some interactive features
-      let colorAnimationInterval;
-
-      // Animate colors over time (optional - can be toggled)
-      function startColorAnimation() {
-        colorAnimationInterval = setInterval(() => {
-          nodes.forEach((node, i) => {
-            const time = Date.now() * 0.001;
-            const hue = ((i / nodes.length) * 360 + time * 10) % 360;
-            node.color = `hsl(${hue}, 70%, ${
-              50 + Math.sin(time + i * 0.01) * 20
-            }%)`;
-          });
-
-          cosmograph.setConfig({
-            nodeColor: (node) => node.color,
-          });
-        }, 100);
-      }
-
-      // Add keyboard controls
-      document.addEventListener("keydown", (e) => {
-        switch (e.code) {
-          case "Space":
-            e.preventDefault();
-            document.getElementById("pauseBtn").click();
-            break;
-          case "KeyR":
-            document.getElementById("restartBtn").click();
-            break;
-          case "KeyF":
-            document.getElementById("fitViewBtn").click();
-            break;
-          case "KeyC":
-            document.getElementById("randomizeBtn").click();
-            break;
-        }
-      });
-
-      console.log("🌌 Cosmic Network initialized!");
-      console.log("Keyboard shortcuts:");
-      console.log("  Space - Pause/Resume");
-      console.log("  R - Restart simulation");
-      console.log("  F - Fit view");
-      console.log("  C - Change color scheme");
     </script>
   </body>
 </html>
